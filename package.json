@@ -1,14 +1,14 @@
 {
-  "name": "nodebb-theme-peace",
-  "version": "2.2.7",
+  "name": "nodebb-theme-id.typing",
+  "version": "2.2.33",
   "nbbpm": {
     "compatibility": "^3.5.0"
   },
-  "description": "Peace theme for NodeBB",
+  "description": "Typing theme for NodeBB",
   "main": "lib/library.js",
   "repository": {
     "type": "git",
-    "url": "https://github.com/barisusakli/nodebb-theme-peace"
+    "url": "https://github.com/yennq/nodebb-theme-id.typing"
   },
   "keywords": [
     "nodebb",
@@ -17,15 +17,18 @@
     "bootstrap",
     "responsive"
   ],
+  "dependencies": {
+    "@fontsource/roboto": "5.0.15"
+  },
   "contributors": [
     {
-      "name": "Barış Soner Uşaklı",
-      "email": "baris@nodebb.org",
-      "url": "https://github.com/barisusakli"
+      "name": "Yên Nguyễn",
+      "email": "admin@clgt.pro",
+      "url": "https://github.com/yennq"
     }
   ],
   "license": "BSD-2-Clause",
   "bugs": {
-    "url": "https://github.com/barisusakli/nodebb-theme-peace/issues"
+    "url": "https://github.com/yennq/nodebb-theme-id.typing/issues"
   }
 }

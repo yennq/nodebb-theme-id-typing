@@ -1,8 +1,6 @@
 // only overrides to bs5 variables here
 
-$navbar-nav-link-padding-x: 0.875rem!default;
-
-// persona colors
+// peace colors
 $white:    #fff !default;
 $gray-100: #f8f9fa !default;
 $gray-200: #e9ecef !default;
@@ -15,7 +13,7 @@ $gray-800: #343a40 !default;
 $gray-900: #212529 !default;
 $black:    #000 !default;
 
-$primary: darken(#428bca, 6.5%) !default;
+$primary: $gray-800 !default;
 $secondary: $gray-600 !default;
 $success: #5cb85c !default;
 $info: #5bc0de !default;
@@ -25,16 +23,11 @@ $light: $gray-100 !default;
 $dark: $gray-900 !default;
 
 $card-bg: $white !default;
-
-// font
-$font-family-sans-serif:  -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol" !default;
-// BS5 default is 1rem(16px)
-// $font-size-base: 1rem!default;
+$body-tertiary-bg: 	$gray-200 !default;
 
 $link-decoration:none !default;
 
-// no rounded in persona
-// $enable-rounded: false;
+$font-family-sans-serif: "Roboto", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji" !default;
 
 // no caret on dropdown-toggle
 $enable-caret: false;

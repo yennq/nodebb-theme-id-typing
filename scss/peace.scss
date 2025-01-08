@@ -1,6 +1,8 @@
 @import "./sidebar";
-@import "./chats.scss";
-@import "./nprogress.scss";
+@import "./chats";
+@import "./nprogress";
+@import "./fonts";
+@import "./cover";
 
 html {
 	overflow-y: scroll;
@@ -36,8 +38,8 @@ body.skin-noskin {
 // post tools dropdowns go behind the card of the next post
 // https://github.com/thomaspark/bootswatch/issues/1199
 .skin-quartz {
-	[component="post"] .card {
-		backdrop-filter: none!important;
+	.card {
+		backdrop-filter: none;
 	}
 
 	.tool-modal .dropdown-menu, .composer .dropdown-menu {
@@ -56,20 +58,23 @@ body.skin-noskin {
 	position: static;
 }
 
-// unread bar on topic list
-.topic-list {
-	.category-item {
-		.unread-bar { width: 3px; right: 0px; }
-		&.unread .unread-bar {
-			background-color: $info;
-		}
+// unread dot on topic list
+.topic-list .category-item {
+	.unread-dot { display: none; }
+	&.unread .unread-dot {
+	 	display: inline-block;
 	}
+}
+
+// deleted topics in topics list
+.topic-list > li.deleted {
+	opacity: 0.65;
 }
 
 // deleted posts in topic
 .topic .posts {
 	> li.deleted {
-		.content {
+		.post-content {
 			opacity: 0.3;
 		}
 		.votes {
@@ -139,6 +144,15 @@ blockquote {
 	}
 }
 
+[component="chat/message/body"],
+[component="post/content"],
+[component="topic/teaser"] .post-content,
+[component="category/posts"] .post-content,
+.post-queue.posts-list .post-content {
+	a { text-decoration: underline;}
+}
+
+
 .pagination-block {
 	display: block;
 	transition: opacity 250ms ease-in;
@@ -154,7 +168,7 @@ blockquote {
 	.scroller-container {
 		height: 300px;
 		border-left: 3px solid $border-color;
-		left: 10px;
+		left: 16px;
 		cursor: pointer;
 		.scroller-thumb {
 			position: relative;
@@ -172,7 +186,8 @@ blockquote {
 	}
 }
 
-.account .categories {
+.page-user-categories .categories {
+	.description p { margin-bottom: 0;}
 	[component="categories/category"] {
 		.depth-1 {
 			padding-left: 50px;

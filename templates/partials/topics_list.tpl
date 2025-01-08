@@ -1,10 +1,11 @@
 <ul component="category" class="topic-list list-unstyled" itemscope itemtype="http://www.schema.org/ItemList" data-nextstart="{nextStart}" data-set="{set}">
 	{{{ each topics }}}
 	<li component="category/topic" class="mb-3 category-item {function.generateTopicClass}" <!-- IMPORT partials/data/category.tpl -->>
-		<div class="d-flex align-items-stretch">
-			<div class="position-relative">
-				<div class="unread-bar position-absolute h-100"></div>
+		<div class="d-flex align-items-stretch position-relative">
+			<div class="position-absolute top-0 start-0 translate-middle z-1">
+				<i class="unread-dot fa-solid fa-circle fa-beat text-info" style="--fa-animation-duration: 2s;"></i>
 			</div>
+
 			<div class="card card-body shadow-sm h-100 rounded-3 border-0 ps-0" {{{ if showSelect }}}component="topic/select"{{{ end }}}>
 				<link itemprop="url" content="{config.relative_path}/topic/{../slug}" />
 				<meta itemprop="name" content="{function.stripTags, ../title}" />
@@ -38,7 +39,7 @@
 									{{{ end }}}
 								</h5>
 
-								<div class="d-flex gap-1 opacity-75 align-items-start">
+								<div class="d-flex gap-1 align-items-start">
 									<div component="topic/labels" class="d-flex gap-1 text-truncate align-items-center flex-wrap w-100">
 										<span component="topic/scheduled" class="badge border border-gray-300 text-body {{{ if !./scheduled }}}hidden{{{ end }}}">
 											<i class="fa fa-clock-o"></i>
@@ -69,16 +70,21 @@
 											{{{ end }}}
 										</div>
 
-										<a href="{config.relative_path}/topic/{./slug}" class="timeago badge border border-gray-300 text-body fw-normal" title="{./timestampISO}"></a>
-									</div>
-									<div class="d-flex flex-grow-1 justify-content-end gap-2">
-										<span class="badge border border-gray-300 text-body d-none d-lg-inline-block"><i class="fa fa-heart"></i> {./votes}</span>
-										<span class="badge border border-gray-300 text-body"><i class="fa fa-pencil"></i> {./postcount}</span>
+										<a href="{config.relative_path}/topic/{./slug}" class="timeago badge border border-gray-300 text-muted fw-semibold" title="{./timestampISO}"></a>
+										<span class="badge border border-gray-300 text-muted fw-semibold "><i class="fa-regular fa-heart"></i> {./votes}</span>
+										<span class="badge border border-gray-300 text-muted fw-semibold"><i class="fa-regular fa-message"></i> {./postcount}</span>
 									</div>
 								</div>
 							</div>
 						</div>
 					</div>
+
+					{{{ if ./thumbs.length }}}
+					<a class="topic-thumbs position-relative text-decoration-none flex-shrink-0 d-none d-xl-block" href="{config.relative_path}/topic/{./slug}{{{ if ./bookmark }}}/{./bookmark}{{{ end }}}" aria-label="[[topic:thumb-image]]">
+						<img class="topic-thumb rounded-1 bg-light" style="width:auto;max-width: 5.33rem;height: 3.33rem;object-fit: contain;" src="{./thumbs.0.url}" alt=""/>
+						<span data-numthumbs="{./thumbs.length}" class="px-1 position-absolute top-0 start-100 translate-middle badge rounded text-bg-info" style="z-index: 1;">+{increment(./thumbs.length, "-1")}</span>
+					</a>
+					{{{ end }}}
 				</div>
 			</div>
 		</div>
