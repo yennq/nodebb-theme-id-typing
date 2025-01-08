@@ -3,7 +3,7 @@
 
 	<div class="row m-0">
 		<div id="spy-container" class="col-12 col-md-8 px-0 mb-4" tabindex="0">
-			<form role="form" class="peace-settings">
+			<form role="form" class="ai.typing-settings">
 				<div class="form-check">
 					<label class="form-check-label">Enable quick reply</label>
 					<input class="form-check-input" id="enableQuickReply" type="checkbox" name="enableQuickReply" />

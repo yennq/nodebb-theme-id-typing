@@ -8,10 +8,10 @@
 		{ "hook": "filter:admin.header.build", "method": "addAdminNavigation" }
 	],
 	"scripts": [
-		"public/peace.js"
+		"public/ai.typing.js"
 	],
 	"modules": {
-		"../admin/plugins/peace.js": "public/admin.js"
+		"../admin/plugins/ai.typing.js": "public/admin.js"
 	},
 	"staticDirs": {
 		"roboto": "node_modules/@fontsource/roboto/files"

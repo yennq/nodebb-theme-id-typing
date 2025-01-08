@@ -1,14 +1,14 @@
 
 'use strict';
 
-define('admin/plugins/peace', ['settings'], function (Settings) {
+define('admin/plugins/ai.typing', ['settings'], function (Settings) {
 	const ACP = {};
 
 	ACP.init = function () {
-		Settings.load('peace', $('.peace-settings'));
+		Settings.load('ai.typing', $('.ai.typing-settings'));
 
 		$('#save').on('click', function () {
-			Settings.save('peace', $('.peace-settings'));
+			Settings.save('ai.typing', $('.ai.typing-settings'));
 		});
 	};
 

@@ -1,7 +1,7 @@
-Peace theme for NodeBB
+Ai.Typing Theme for NodeBB
 ====================
 
-Peace is a simple theme with a sidebar navigation, it comes with a builtin bootswatch theme switcher.
+ai.typing is a simple theme with a sidebar navigation, it comes with a builtin bootswatch theme switcher.
 
 ## Screenshots
 ### Categories
