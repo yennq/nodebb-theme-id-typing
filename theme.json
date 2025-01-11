@@ -3,5 +3,6 @@
     "name": "Typing",
     "description": "A clean theme, optimized for use with Bootswatch skins.",
     "url": "https://github.com/yennq/nodebb-theme-id-typing",
-    "screenshot": "screenshot.png"
+    "screenshot": "screenshot.png",
+    "baseTheme": "nodebb-theme-persona"
 }
