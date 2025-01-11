@@ -1,5 +1,5 @@
 {
-	"id": "nodebb-theme-id.typing",
+	"id": "nodebb-theme-id-typing",
 	"hooks": [
 		{ "hook": "static:app.load", "method": "init" },
 		{ "hook": "filter:widgets.getAreas", "method": "defineWidgetAreas" },

@@ -1,5 +1,5 @@
 {
-  "name": "nodebb-theme-id.typing",
+  "name": "nodebb-theme-id-typing",
   "version": "2.2.33",
   "nbbpm": {
     "compatibility": "^3.5.0"
@@ -8,7 +8,7 @@
   "main": "lib/library.js",
   "repository": {
     "type": "git",
-    "url": "https://github.com/yennq/nodebb-theme-id.typing"
+    "url": "https://github.com/yennq/nodebb-theme-id-typing"
   },
   "keywords": [
     "nodebb",
@@ -29,6 +29,6 @@
   ],
   "license": "BSD-2-Clause",
   "bugs": {
-    "url": "https://github.com/yennq/nodebb-theme-id.typing/issues"
+    "url": "https://github.com/yennq/nodebb-theme-id-typing/issues"
   }
 }

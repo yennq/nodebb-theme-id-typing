@@ -3,7 +3,7 @@
 
 $weights: $font-weight-light, $font-weight-normal, $font-weight-semibold, $font-weight-bold;
 $subsets: (latin, latin-ext);
-$font-path: "./plugins/nodebb-theme-id.typing" !default;
+$font-path: "./plugins/nodebb-theme-id-typing" !default;
 
 @include Roboto.faces(
 	$weights: $weights,
