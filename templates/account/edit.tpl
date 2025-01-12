@@ -3,7 +3,7 @@
 	<div>
 		<div class="row">
 			<div class="col-12 col-xl-6">
-				<div class="card card-body shadow-sm border-0">
+				<div class="card card-body border-0">
 					<form role="form" component="profile/edit/form">
 						<div class="mb-2">
 							<label class="form-label fw-bold" for="fullname">[[user:fullname]]</label>

@@ -15,7 +15,7 @@
 
 	{{{ if showAsTopics }}}
 	{{{each posts}}}
-	<div class="topic-row card shadow-sm border-0 mb-3">
+	<div class="topic-row card border-0 mb-3">
 		<div class="card-body">
 			<div class="mb-2">
 				<a href="{config.relative_path}/user/{./user.userslug}">{buildAvatar(./user, "24px", true)}</a>
