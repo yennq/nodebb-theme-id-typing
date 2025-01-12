@@ -39,7 +39,7 @@
 									{{{ end }}}
 								</h5>
 
-								<div class="d-flex gap-1 align-items-start">
+								<div>
 									{./teaser.content}
 								</div>
 
