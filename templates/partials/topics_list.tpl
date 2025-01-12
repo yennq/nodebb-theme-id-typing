@@ -6,7 +6,7 @@
 				<i class="unread-dot fa-solid fa-circle fa-beat text-info" style="--fa-animation-duration: 2s;"></i>
 			</div>
 
-			<div class="card card-body shadow-sm h-100 rounded-3 border-0 ps-0" {{{ if showSelect }}}component="topic/select"{{{ end }}}>
+			<div class="card card-body h-100 rounded-3 border-0 ps-0" {{{ if showSelect }}}component="topic/select"{{{ end }}}>
 				<link itemprop="url" content="{config.relative_path}/topic/{../slug}" />
 				<meta itemprop="name" content="{function.stripTags, ../title}" />
 				<meta itemprop="itemListOrder" content="descending" />

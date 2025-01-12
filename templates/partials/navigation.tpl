@@ -1,7 +1,9 @@
 <li class="mb-1">
-	<h6 class="text-uppercase pointer fw-bold rounded border-0 collapsed" data-bs-toggle="collapse" data-bs-target="#navigation-collapse" aria-expanded="true">
-	[[global:header.navigation]]
-	</h6>
+	<div class="d-flex gap-3 flex-nowrap align-items-center justify-content-between">
+		<h6 class="mb-2 text-uppercase pointer fw-bold rounded border-0 collapsed" data-bs-toggle="collapse" data-bs-target="#navigation-collapse" aria-expanded="true">
+		[[global:header.navigation]]
+		</h6>
+	</div>
 	<div class="collapse show" id="navigation-collapse">
 		<ul id="main-nav" class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
 			{{{each navigation}}}

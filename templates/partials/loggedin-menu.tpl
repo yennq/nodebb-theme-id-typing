@@ -2,7 +2,7 @@
 {{{ if config.loggedIn }}}
 <li class="">
 	<div class="d-flex gap-3 flex-nowrap align-items-center justify-content-between">
-		<h6 class="text-uppercase pointer fw-bold rounded border-0 collapsed" data-bs-toggle="collapse" data-bs-target="#account-collapse" aria-expanded="false">
+		<h6 class="mb-2 text-uppercase pointer fw-bold rounded border-0 collapsed" data-bs-toggle="collapse" data-bs-target="#account-collapse" aria-expanded="false">
 			[[global:header.account]]
 		</h6>
 		{{{ if !config.disableCustomUserSkins }}}

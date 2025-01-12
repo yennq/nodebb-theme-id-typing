@@ -2,9 +2,11 @@
 {{{ if showModMenu }}}
 <li class="border-top my-2"></li>
 <li class="mb-2">
-	<h6 class="text-uppercase pointer fw-bold rounded border-0 collapsed" data-bs-toggle="collapse" data-bs-target="#manage-collapse" aria-expanded="true">
-	[[global:header.manage]]
-	</h6>
+	<div class="d-flex gap-3 flex-nowrap align-items-center justify-content-between">
+		<h6 class="mb-2 text-uppercase pointer fw-bold rounded border-0 collapsed" data-bs-toggle="collapse" data-bs-target="#manage-collapse" aria-expanded="true">
+		[[global:header.manage]]
+		</h6>
+	</div>
 	<div class="collapse show" id="manage-collapse">
 		<ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
 			{{{ if showModMenu }}}

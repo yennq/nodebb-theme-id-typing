@@ -9,6 +9,7 @@
 				<div class="title fw-semibold">
 					<!-- IMPORT partials/categories/link.tpl -->
 				</div>
+
 				{{{ if ./descriptionParsed }}}
 				<div class="description text-muted text-xs w-100">{./descriptionParsed}</div>
 				{{{ end }}}
