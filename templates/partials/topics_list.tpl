@@ -28,7 +28,7 @@
 						</a>
 					</div>
 
-					<div class="text-wrap text-truncate flex-grow-1 d-flex align-items-center">
+					<div class="text-wrap text-truncate flex-grow-1 d-flex align-items-top">
 						<div class="w-100" component="post/header">
 							<div class="d-flex flex-column w-100">
 								<h5 component="topic/header" class="title">
@@ -39,9 +39,17 @@
 									{{{ end }}}
 								</h5>
 
-								<div>
-									{./teaser.content}
+								{{{ if ./thumbs.length }}}
+								<div class="position-relative mb-3 mt-1">
+									<div class="topic-thumbs position-relative text-decoration-none flex-shrink-0 d-none d-xl-block" aria-label="[[topic:thumb-image]]">
+										<img class="topic-thumb rounded-2 bg-light" style="width:auto;max-width: 100%;height: auto;object-fit: contain;" src="{./thumbs.0.url}" alt=""/>
+										<span data-numthumbs="{./thumbs.length}" class="px-1 position-absolute top-0 start-50 translate-middle badge rounded text-bg-info" style="z-index: 1;">+{increment(./thumbs.length, "-1")}</span>
+										<div class="position-absolute top-50 start-50 translate-middle text-wrap text-truncate h3 bg-success p-3 text-white bg-opacity-50">{./teaser.content}</div>
+									</div>
 								</div>
+								{{{ else }}}
+								<div>{./teaser.content}</div>
+								{{{ end }}}
 
 								<div class="d-flex gap-1 align-items-start">
 									<div component="topic/labels" class="d-flex gap-1 text-truncate align-items-center flex-wrap w-100">
@@ -81,13 +89,6 @@
 							</div>
 						</div>
 					</div>
-
-					{{{ if ./thumbs.length }}}
-					<a class="topic-thumbs position-relative text-decoration-none flex-shrink-0 d-none d-xl-block" href="{config.relative_path}/topic/{./slug}{{{ if ./bookmark }}}/{./bookmark}{{{ end }}}" aria-label="[[topic:thumb-image]]">
-						<img class="topic-thumb rounded-1 bg-light" style="width:auto;max-width: 5.33rem;height: 3.33rem;object-fit: contain;" src="{./thumbs.0.url}" alt=""/>
-						<span data-numthumbs="{./thumbs.length}" class="px-1 position-absolute top-0 start-100 translate-middle badge rounded text-bg-info" style="z-index: 1;">+{increment(./thumbs.length, "-1")}</span>
-					</a>
-					{{{ end }}}
 				</div>
 			</div>
 		</div>
