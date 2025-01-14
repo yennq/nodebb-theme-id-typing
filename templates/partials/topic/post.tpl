@@ -40,7 +40,8 @@
 					</div>
 				</div>
 			</div>
-			<div class="d-flex gap-2 justify-content-end align-items-center hidden-empty" component="topic/thumb/list">
+
+			<div class="d-flex gap-2 justify-content-end align-items-center hidden" component="topic/thumb/list">
 				{{{ each thumbs }}}
 				<a class="d-inline-block h-100" href="{./url}">
 					<img class="rounded-1 h-100 bg-light" style="max-width: 4rem; object-fit: contain;" src="{./url}" />
