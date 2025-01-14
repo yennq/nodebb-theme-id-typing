@@ -12,7 +12,7 @@
 				<a class="navigation-link align-items-center {{{ if navigation.dropdown }}}dropdown-toggle{{{ end }}} btn btn-sm btn-ghost"
 				{{{ if navigation.dropdown }}} href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" {{{ else }}} href="{navigation.route}"{{{ end }}} {{{ if navigation.id }}}id="{navigation.id}"{{{ end }}}{{{ if navigation.targetBlank }}} target="_blank"{{{ end }}}>
 					{{{ if navigation.iconClass }}}
-					<i class="fa fa-fw text-muted hidden {navigation.iconClass}" data-content="{navigation.content}"></i>
+					<i class="fa fa-fw text-muted {navigation.iconClass}" data-content="{navigation.content}"></i>
 					{{{ end }}}
 					{{{ if navigation.text }}}
 					<span class="">{navigation.text}</span>
