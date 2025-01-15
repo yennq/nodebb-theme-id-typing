@@ -43,7 +43,7 @@
 								<div class="position-relative mb-3 mt-1">
 									<div class="topic-thumbs rounded-2 position-relative text-decoration-none flex-shrink-0 d-none d-xl-block" aria-label="[[topic:thumb-image]]">
 										<img class="topic-thumb bg-light" style="width:auto;max-width: 100%;height: auto;object-fit: contain;" src="{./thumbs.0.url}" alt=""/>
-										<span data-numthumbs="{./thumbs.length}" class="px-1 position-absolute top-0 start-50 translate-middle badge rounded text-bg-info" style="z-index: 1;">+{increment(./thumbs.length, "-1")}</span>
+										<span data-numthumbs="{./thumbs.length}" class="px-1 mt-1 position-absolute top-0 start-50 translate-middle-x badge rounded text-bg-info">+{increment(./thumbs.length, "-1")}</span>
 										{{{ if ./teaser.content.length }}}
 										<div class="w-75 position-absolute top-50 start-50 translate-middle text-wrap text-truncate h3 bg-success p-3 text-white bg-opacity-50 text-log">{./teaser.content}</div>
 										{{{ end }}}
