@@ -49,8 +49,8 @@
 										{{{ end }}}
 									</div>
 								</div>
-								{{{ else }}}
-								<div>{./teaser.content}</div>
+								{{{ if ./teaser.content.length }}}
+								<div class="teaser-content mb-3">{./teaser.content}</div>
 								{{{ end }}}
 
 								<div class="d-flex gap-1 align-items-start">
