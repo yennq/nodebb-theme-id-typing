@@ -1,4 +1,4 @@
-<div class="account mb-5">
+<div class="account">
 
 	<!-- IMPORT partials/account/header.tpl -->
 

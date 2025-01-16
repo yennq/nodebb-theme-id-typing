@@ -1,4 +1,4 @@
-<div class="topic mb-5 d-flex gap-2">
+<div class="topic d-flex gap-2">
 	<div class="flex-1" style="min-width: 0;">
 		{{{ if merger }}}
 		<!-- IMPORT partials/topic/merged-message.tpl -->
@@ -36,6 +36,12 @@
 		<!-- IMPORT partials/topic/quickreply.tpl -->
 		{{{ end }}}
 
+		<div class="mt-2" data-widget-area="footer">
+			{{{each widgets.footer}}}
+			{{widgets.footer.html}}
+			{{{end}}}
+		</div>
+
 		{{{ if config.usePagination }}}
 		<!-- IMPORT partials/paginator.tpl -->
 		{{{ end }}}
@@ -43,12 +49,6 @@
 	<div class="px-0 px-lg-2">
 		<!-- IMPORT partials/topic/sidebar.tpl -->
 	</div>
-</div>
-
-<div data-widget-area="footer">
-	{{{each widgets.footer}}}
-	{{widgets.footer.html}}
-	{{{end}}}
 </div>
 
 <!-- IF !config.usePagination -->
