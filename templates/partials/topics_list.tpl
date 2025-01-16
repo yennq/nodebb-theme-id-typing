@@ -45,15 +45,15 @@
 										<img class="topic-thumb bg-light" style="width:auto;max-width: 100%;height: auto;object-fit: contain;" src="{./thumbs.0.url}" alt=""/>
 										<span data-numthumbs="{./thumbs.length}" class="px-1 mt-1 position-absolute top-0 start-50 translate-middle-x badge rounded text-bg-info">+{increment(./thumbs.length, "-1")}</span>
 										{{{ if ./teaser.content.length }}}
-										<div class="w-75 position-absolute top-50 start-50 translate-middle text-wrap text-truncate h3 bg-warning m-0 p-3 text-white bg-opacity-50 text-log">{./teaser.content}</div>
+										<div class="w-75 position-absolute top-50 start-50 translate-middle text-wrap text-truncate h3 bg-success m-0 p-3 text-white bg-opacity-50 text-log">{./teaser.content}</div>
 										{{{ end }}}
 									</div>
 								</div>
 								{{{ else }}}
 								{{{ if ./teaser.content.length }}}
-								<div class="teaser-content mb-3">{./teaser.content}</div>
+								<div class="teaser-content">{./teaser.content}</div>
 								{{{ else }}}
-								<div class="teaser-content mb-3">Bạn có suy nghĩ gì về bài viết này?</div>
+								<div class="teaser-content"><p>Bạn có suy nghĩ gì về bài viết này?</p></div>
 								{{{ end }}}
 								{{{ end }}}
 
