@@ -6,7 +6,7 @@
 				<i class="unread-dot fa-solid fa-circle fa-beat text-info" style="--fa-animation-duration: 2s;"></i>
 			</div>
 
-			<div class="card card-body h-100 rounded-3 border-0 ps-0" {{{ if showSelect }}}component="topic/select"{{{ end }}}>
+			<div class="card card-body h-100 rounded-2 border-0 ps-0" {{{ if showSelect }}}component="topic/select"{{{ end }}}>
 				<link itemprop="url" content="{config.relative_path}/topic/{../slug}" />
 				<meta itemprop="name" content="{function.stripTags, ../title}" />
 				<meta itemprop="itemListOrder" content="descending" />
@@ -45,7 +45,7 @@
 										<img class="topic-thumb bg-light" style="width:auto;max-width: 100%;height: auto;object-fit: contain;" src="{./thumbs.0.url}" alt=""/>
 										<span data-numthumbs="{./thumbs.length}" class="px-1 mt-1 position-absolute top-0 start-50 translate-middle-x badge rounded text-bg-info">+{increment(./thumbs.length, "-1")}</span>
 										{{{ if ./teaser.content.length }}}
-										<div class="w-75 position-absolute top-50 start-50 translate-middle text-wrap text-truncate h3 bg-success m-0 p-3 text-white bg-opacity-50 text-log">{./teaser.content}</div>
+										<div class="position-absolute bottom-0 start-0 text-wrap text-truncate h3 m-0 text-white bg-opacity-50 text-log w-100 px-3 bg-light bg-opacity-50 lh-lg">{./teaser.content}</div>
 										{{{ end }}}
 									</div>
 								</div>
