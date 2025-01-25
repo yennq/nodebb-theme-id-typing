@@ -53,7 +53,7 @@
 								{{{ if ./teaser.content.length }}}
 								<div class="teaser-content">{./teaser.content}</div>
 								{{{ else }}}
-								<div class="teaser-content"><p>Bạn có suy nghĩ gì về bài viết này?</p></div>
+								<div class="teaser-content">Bạn có suy nghĩ gì về bài viết này?</div>
 								{{{ end }}}
 								{{{ end }}}
 
