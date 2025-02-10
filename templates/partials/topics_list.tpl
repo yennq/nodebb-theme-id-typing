@@ -45,7 +45,7 @@
 										<img class="topic-thumb bg-light" style="width:auto;max-width: 100%;height: auto;object-fit: contain;" src="{./thumbs.0.url}" alt=""/>
 										<span data-numthumbs="{./thumbs.length}" class="px-1 mt-1 position-absolute top-0 start-50 translate-middle-x badge rounded text-bg-info">+{increment(./thumbs.length, "-1")}</span>
 										{{{ if ./teaser.content.length }}}
-										<div class="position-absolute bottom-0 start-0 text-wrap text-truncate h3 m-0 text-white bg-opacity-50 text-log w-100 px-3 bg-light bg-opacity-50 lh-lg">{./teaser.content}</div>
+										<div class="position-absolute bottom-0 start-0 text-wrap text-truncate h3 m-0 text-white bg-opacity-50 text-log w-100 px-3 bg-dark bg-opacity-50 lh-lg">{./teaser.content}</div>
 										{{{ end }}}
 									</div>
 								</div>
