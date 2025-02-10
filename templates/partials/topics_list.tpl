@@ -39,6 +39,14 @@
 									{{{ end }}}
 								</h5>
 
+								<div class="d-flex gap-1 text-truncate align-items-center flex-wrap w-100">
+									<div data-tid="{./tid}" component="topic/tags" class="tags tag-list d-none d-md-inline-flex gap-1 lh-1 {{{ if !./tags.length}}}hidden{{{ end }}}">
+										{{{ each ./tags }}}
+										<!-- IMPORT partials/topic/tag.tpl -->
+										{{{ end }}}
+									</div>
+								</div>
+
 								{{{ if ./thumbs.length }}}
 								<div class="position-relative mb-3 mt-1">
 									<div class="topic-thumbs rounded-1 position-relative text-decoration-none flex-shrink-0 d-none d-xl-block" aria-label="[[topic:thumb-image]]">
@@ -80,12 +88,6 @@
 										{{{ if !template.category }}}
 										{function.buildCategoryLabel, ./category, "a", "border"}
 										{{{ end }}}
-
-										<div data-tid="{./tid}" component="topic/tags" class="tags tag-list d-none d-md-inline-flex gap-1 lh-1 {{{ if !./tags.length}}}hidden{{{ end }}}">
-											{{{ each ./tags }}}
-											<!-- IMPORT partials/topic/tag.tpl -->
-											{{{ end }}}
-										</div>
 
 										<a href="{config.relative_path}/topic/{./slug}" class="timeago badge border border-gray-300 text-muted fw-semibold" title="{./timestampISO}"></a>
 										<span class="badge border border-gray-300 text-muted fw-semibold "><i class="fa-regular fa-heart"></i> {./votes}</span>
