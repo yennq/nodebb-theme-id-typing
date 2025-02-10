@@ -2,7 +2,7 @@
 
 	<!-- IMPORT partials/account/header.tpl -->
 
-	<div class="card card-body border-0 rounded-3 flex-column mb-4">
+	<div class="card card-body border-0 rounded-1 flex-column mb-4">
 		<div class="account-stats">
 			<div class="row row-cols-2 row-cols-xl-3 row-cols-xxl-4 g-2">
 				{{{ if !reputation:disabled }}}

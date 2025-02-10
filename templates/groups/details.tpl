@@ -1,5 +1,5 @@
 <div component="groups/container" class="groups details">
-	<div class="card card-body p-1 border-0 rounded-3 mb-4">
+	<div class="card card-body p-1 border-0 rounded-1 mb-4">
 		<div class="d-flex flex-column flex-fill gap-3">
 			<div class="cover rounded-1 w-100" component="groups/cover" style="background-image: url({group.cover:url}); background-position: {group.cover:position};">
 				{{{ if group.isOwner }}}

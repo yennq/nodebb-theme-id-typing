@@ -1,4 +1,4 @@
-<div class="card card-body px-3 h-100 rounded-3 border-0">
+<div class="card card-body px-3 h-100 rounded-1 border-0">
 
 	{{{ if !posts.index }}}
 	<!-- main post topic info -->

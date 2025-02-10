@@ -37,7 +37,7 @@
 
 	<ul component="notifications/list" class="notifications-list list-unstyled" data-nextstart="{nextStart}">
 	{{{each notifications}}}
-		<li data-nid="{notifications.nid}" class="{notifications.readClass} d-flex mb-2 card card-body rounded-3 border-0 {{{ if !./read}}}unread{{{ end }}}" component="notifications/item">
+		<li data-nid="{notifications.nid}" class="{notifications.readClass} d-flex mb-2 card card-body rounded-1 border-0 {{{ if !./read}}}unread{{{ end }}}" component="notifications/item">
 			<div class="d-flex gap-3">
 				<div class="align-self-start">
 					{{{ if notifications.from }}}
