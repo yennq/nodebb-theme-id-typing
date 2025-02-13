@@ -23,8 +23,8 @@
 
 					<!-- mobile profile picture -->
 					<div class="d-inline-block d-lg-none mx-2">
-						<div class="d-inline-block">
-							<a class="mb-2" href="{{{ if ./user.userslug }}}{config.relative_path}/user/{./user.userslug}{{{ else }}}#{{{ end }}}">
+						<div class="d-grid gap-1">
+							<a class="mb-1" href="{{{ if ./user.userslug }}}{config.relative_path}/user/{./user.userslug}{{{ else }}}#{{{ end }}}">
 								{buildAvatar(./user, "24px", false, "rounded")}
 							</a>
 
