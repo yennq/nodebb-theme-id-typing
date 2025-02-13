@@ -15,5 +15,5 @@
 		</div>
 	</div>
 
-	<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="close"></button>
+	<button type="button" class="btn-sm-close" data-bs-dismiss="alert" aria-label="close"></button>
 </div>

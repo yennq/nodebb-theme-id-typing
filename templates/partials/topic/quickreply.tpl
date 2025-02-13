@@ -14,8 +14,8 @@
 				<div class="imagedrop"><div>[[topic:composer.drag-and-drop-images]]</div></div>
 			</div>
 			<div class="d-flex gap-1 justify-content-end">
-				<button type="submit" component="topic/quickreply/expand" class="btn btn-outline-primary" formmethod="get"><i class="fa fa-expand"></i></button>
-				<button type="submit" component="topic/quickreply/button" class="btn btn-primary">[[topic:post-quick-reply]]</button>
+				<button type="submit" component="topic/quickreply/expand" class="btn-sm btn-sm-outline-primary" formmethod="get"><i class="fa fa-expand"></i></button>
+				<button type="submit" component="topic/quickreply/button" class="btn-sm btn-sm-primary">[[topic:post-quick-reply]]</button>
 			</div>
 		</form>
 		<form component="topic/quickreply/upload" method="post" enctype="multipart/form-data">

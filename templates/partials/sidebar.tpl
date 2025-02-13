@@ -3,7 +3,7 @@
 {{{ if (brand:logo || config.showSiteTitle) }}}
 <div class="mb-3 d-flex flex-column gap-2">
 	{{{ if brand:logo }}}
-	<a class="btn logo btn-ghost p-1" href="{{{ if brand:logo:url }}}{brand:logo:url}{{{ else }}}{relative_path}/{{{ end }}}">
+	<a class="btn-sm logo btn-sm-ghost p-1" href="{{{ if brand:logo:url }}}{brand:logo:url}{{{ else }}}{relative_path}/{{{ end }}}">
 		<img alt="{brand:logo:alt}" class="{brand:logo:display} forum-logo" src="{brand:logo}?{config.cache-buster}" style="width: 100%; height: auto;"/>
 	</a>
 	{{{ end }}}

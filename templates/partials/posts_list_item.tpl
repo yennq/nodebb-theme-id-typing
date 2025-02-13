@@ -1,4 +1,4 @@
-<li component="post" class="posts-list-item card border-0 rounded-0 mb-3 {{{if ../deleted }}}deleted{{{ else }}}{{{ if ../topic.deleted }}} deleted{{{ end }}}{{{ end }}}{{{ if ../topic.scheduled }}} scheduled{{{ end }}}" data-pid="{../pid}" data-uid="{../uid}">
+<li component="post" class="posts-list-item card border-0 rounded-1 mb-3 {{{if ../deleted }}}deleted{{{ else }}}{{{ if ../topic.deleted }}} deleted{{{ end }}}{{{ end }}}{{{ if ../topic.scheduled }}} scheduled{{{ end }}}" data-pid="{../pid}" data-uid="{../uid}">
     <div class="card-body">
         <h5><a class="topic-title" href="{config.relative_path}/post/{../pid}">
             <span class="text-muted">{{{ if ../isMainPost }}}<i class="fa fa-book"></i>{{{ else }}}<i class="fa fa-reply"></i>{{{ end }}}</span> {../topic.title}
@@ -18,7 +18,7 @@
         </div>
 
         <a class="" href="{config.relative_path}/category/{./category.slug}">
-            <span class="badge rounded-0" style="color:{./category.color}; background-color: {./category.bgColor};"><i class="fa {./category.icon}"></i>&nbsp;{./category.name}</span>
+            <span class="badge rounded-1" style="color:{./category.color}; background-color: {./category.bgColor};"><i class="fa {./category.icon}"></i>&nbsp;{./category.name}</span>
         </a>
 
         {{{ if ../isMainPost }}}

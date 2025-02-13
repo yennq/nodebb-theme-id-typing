@@ -1,12 +1,12 @@
 <div component="groups/container" class="groups details">
-	<div class="card card-body p-1 border-0 rounded-0 mb-4">
+	<div class="card card-body p-1 border-0 rounded-1 mb-4">
 		<div class="d-flex flex-column flex-fill gap-3">
-			<div class="cover rounded-0 w-100" component="groups/cover" style="background-image: url({group.cover:url}); background-position: {group.cover:position};">
+			<div class="cover rounded-1 w-100" component="groups/cover" style="background-image: url({group.cover:url}); background-position: {group.cover:position};">
 				{{{ if group.isOwner }}}
 				<div class="controls text-center">
-					<span class="upload p-2 m-2 rounded-0 text-bg-light opacity-75"><i class="fa fa-fw fa-upload"></i></span>
-					<span class="resize p-2 m-2 rounded-0 text-bg-light opacity-75"><i class="fa fa-fw fa-arrows"></i></span>
-					<span class="remove p-2 m-2 rounded-0 text-bg-light opacity-75"><i class="fa fa-fw fa-times"></i></span>
+					<span class="upload p-2 m-2 rounded-1 text-bg-light opacity-75"><i class="fa fa-fw fa-upload"></i></span>
+					<span class="resize p-2 m-2 rounded-1 text-bg-light opacity-75"><i class="fa fa-fw fa-arrows"></i></span>
+					<span class="remove p-2 m-2 rounded-1 text-bg-light opacity-75"><i class="fa fa-fw fa-times"></i></span>
 				</div>
 				<div class="save text-bg-primary">[[groups:cover-save]] <i class="fa fa-fw fa-floppy-o"></i></div>
 				<div class="indicator text-bg-primary">[[groups:cover-saving]] <i class="fa fa-fw fa-refresh fa-spin"></i></div>
@@ -28,10 +28,10 @@
 				</div>
 				<div class="d-flex gap-2 align-items-start">
 					{{{ if loggedIn }}}
-					{function.membershipBtn, group}
+					{function.membershipbtn-sm, group}
 					{{{ end }}}
 					{{{ if isAdmin }}}
-					<a href="{config.relative_path}/admin/manage/groups/{group.nameEncoded}" target="_blank" class="btn btn-light"><i class="fa fa-gear"></i> [[user:edit]]</a>
+					<a href="{config.relative_path}/admin/manage/groups/{group.nameEncoded}" target="_blank" class="btn-sm btn-sm-light"><i class="fa fa-gear"></i> [[user:edit]]</a>
 					{{{ end }}}
 				</div>
 			</div>
@@ -39,26 +39,26 @@
 	</div>
 
 	<div class="text-sm mb-3 nav d-flex flex-row flex-wrap gap-1 ">
-		<button data-bs-toggle="tab" data-bs-target="#groups-posts" class="btn btn-ghost text-start d-flex align-items-center ff-secondary fw-semibold {{{ if template.groups/details }}}active{{{ end }}}">
+		<button data-bs-toggle="tab" data-bs-target="#groups-posts" class="btn-sm btn-sm-ghost text-start d-flex align-items-center ff-secondary fw-semibold {{{ if template.groups/details }}}active{{{ end }}}">
 			<div class="flex-grow-1">[[global:posts]]</div>
 		</button>
-		<button data-bs-toggle="tab" data-bs-target="#groups-members" class="btn btn-ghost text-start d-flex align-items-center ff-secondary fw-semibold gap-2">
+		<button data-bs-toggle="tab" data-bs-target="#groups-members" class="btn-sm btn-sm-ghost text-start d-flex align-items-center ff-secondary fw-semibold gap-2">
 			<div class="flex-grow-1">[[groups:members]]</div>
 			<span component="group/member/count" class="flex-shrink-0 text-xs" title="{group.memberCount}">{humanReadableNumber(group.memberCount)}</span>
 		</button>
 
 		{{{ if group.isOwner }}}
-		<button data-bs-toggle="tab" data-bs-target="#groups-pending" class="btn btn-ghost text-start d-flex align-items-center ff-secondary fw-semibold gap-2">
+		<button data-bs-toggle="tab" data-bs-target="#groups-pending" class="btn-sm btn-sm-ghost text-start d-flex align-items-center ff-secondary fw-semibold gap-2">
 			<div class="flex-grow-1">[[groups:details.pending]]</div>
 			<span component="group/pending/count" class="flex-shrink-0 text-xs" title="{group.pending.length}">{humanReadableNumber(group.pending.length)}</span>
 		</button>
 
-		<button data-bs-toggle="tab" data-bs-target="#groups-invited" class="btn btn-ghost text-start d-flex align-items-center ff-secondary fw-semibold gap-2">
+		<button data-bs-toggle="tab" data-bs-target="#groups-invited" class="btn-sm btn-sm-ghost text-start d-flex align-items-center ff-secondary fw-semibold gap-2">
 			<div class="flex-grow-1">[[groups:details.invited]]</div>
 			<span component="group/invited/count" class="flex-shrink-0 text-xs" title="{group.invited.length}">{humanReadableNumber(group.invited.length)}</span>
 		</button>
 
-		<button data-bs-toggle="tab" data-bs-target="#groups-admin" class="btn btn-ghost text-start d-flex align-items-center ff-secondary fw-semibold">
+		<button data-bs-toggle="tab" data-bs-target="#groups-admin" class="btn-sm btn-sm-ghost text-start d-flex align-items-center ff-secondary fw-semibold">
 			<div class="flex-grow-1">[[global:header.admin]]</div>
 		</button>
 		{{{ end }}}

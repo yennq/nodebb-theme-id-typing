@@ -1,24 +1,24 @@
-<div class="btn-group bottom-sheet" component="thread/sort">
-	<button class="btn btn-ghost ff-secondary d-flex gap-2 align-items-center dropdown-toggle" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" aria-label="[[aria:post-sort-option, {sortOptionLabel}]]">
-		<i class="fa fa-fw fa-arrow-down-wide-short text-primary" style="line-height: var(--bs-btn-line-height);"></i>
+<div class="btn-sm-group bottom-sheet" component="thread/sort">
+	<button class="btn-sm btn-sm-ghost ff-secondary d-flex gap-2 align-items-center dropdown-toggle" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" aria-label="[[aria:post-sort-option, {sortOptionLabel}]]">
+		<i class="fa fa-fw fa-arrow-down-wide-short text-primary" style="line-height: var(--bs-btn-sm-line-height);"></i>
 		<span class="d-none d-xl-inline fw-semibold">{sortOptionLabel}</span>
 	</button>
 
 	<ul class="dropdown-menu dropdown-menu-end p-1 text-sm" role="menu">
 		<li>
-			<a class="dropdown-item rounded-0 d-flex align-items-center gap-2" href="#" class="oldest_to_newest" data-sort="oldest_to_newest" role="menuitem">
+			<a class="dropdown-item rounded-1 d-flex align-items-center gap-2" href="#" class="oldest_to_newest" data-sort="oldest_to_newest" role="menuitem">
 				<span class="flex-grow-1">[[topic:oldest-to-newest]]</span>
 				<i class="flex-shrink-0 fa fa-fw text-muted"></i>
 			</a>
 		</li>
 		<li>
-			<a class="dropdown-item rounded-0 d-flex align-items-center gap-2" href="#" class="newest_to_oldest" data-sort="newest_to_oldest" role="menuitem">
+			<a class="dropdown-item rounded-1 d-flex align-items-center gap-2" href="#" class="newest_to_oldest" data-sort="newest_to_oldest" role="menuitem">
 				<span class="flex-grow-1">[[topic:newest-to-oldest]]</span>
 				<i class="flex-shrink-0 fa fa-fw text-muted"></i>
 			</a>
 		</li>
 		<li>
-			<a class="dropdown-item rounded-0 d-flex align-items-center gap-2" href="#" class="most_votes" data-sort="most_votes" role="menuitem">
+			<a class="dropdown-item rounded-1 d-flex align-items-center gap-2" href="#" class="most_votes" data-sort="most_votes" role="menuitem">
 				<span class="flex-grow-1">[[topic:most-votes]]</span>
 				<i class="flex-shrink-0 fa fa-fw text-muted"></i>
 			</a>
