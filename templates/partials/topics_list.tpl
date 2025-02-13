@@ -17,7 +17,7 @@
 					<!-- profile pic-->
 					<div class="d-none d-lg-block px-3">
 						<div class="d-grid gap-1">
-							<a href="{{{ if ./user.userslug }}}{config.relative_path}/user/{./user.userslug}{{{ else }}}#{{{ end }}}">
+							<a class="mb-1" href="{{{ if ./user.userslug }}}{config.relative_path}/user/{./user.userslug}{{{ else }}}#{{{ end }}}">
 								{buildAvatar(./user, "64px", false, "rounded")}
 							</a>
 
@@ -49,7 +49,7 @@
 									{{{ end }}}
 								</h5>
 
-								<div class="d-flex gap-1 text-truncate align-items-center flex-wrap w-100 mt-1 mb-2">
+								<div class="d-flex gap-1 text-truncate align-items-center flex-wrap w-100 mt-0 mb-2">
 									<div data-tid="{./tid}" component="topic/tags" class="tags tag-list d-none d-md-inline-flex gap-1 lh-1 {{{ if !./tags.length}}}hidden{{{ end }}}">
 										{{{ each ./tags }}}
 										<!-- IMPORT partials/topic/tag.tpl -->
