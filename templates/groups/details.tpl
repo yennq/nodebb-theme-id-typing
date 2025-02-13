@@ -21,8 +21,8 @@
 					<div class="d-flex gap-2">
 						{group.descriptionParsed}
 						<div class="pb-3">
-							{{{ if group.private }}}<span class="badge text-bg-light border-0border-1">[[groups:details.private]]</span>{{{ end }}}
-							{{{ if group.hidden }}}<span class="badge text-bg-light border-0border-1">[[groups:details.hidden]]</span>{{{ end }}}
+							{{{ if group.private }}}<span class="badge text-bg-light border-0border-0">[[groups:details.private]]</span>{{{ end }}}
+							{{{ if group.hidden }}}<span class="badge text-bg-light border-0border-0">[[groups:details.hidden]]</span>{{{ end }}}
 						</div>
 					</div>
 				</div>

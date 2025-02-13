@@ -9,7 +9,7 @@
 			{{{each navigation}}}
 			<!-- IF function.displayMenuItem, @index -->
 			<li class="d-flex justify-content-between align-items-center {navigation.class}{{{ if navigation.dropdown }}} dropend{{{ end }}}" title="{navigation.title}">
-				<a class="navigation-link align-items-center {{{ if navigation.dropdown }}}dropdown-toggle{{{ end }}} btn btn-sm btn-ghost"
+				<a class="navigation-link align-items-center {{{ if navigation.dropdown }}}dropdown-toggle{{{ end }}} btn btn-ghost"
 				{{{ if navigation.dropdown }}} href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" {{{ else }}} href="{navigation.route}"{{{ end }}} {{{ if navigation.id }}}id="{navigation.id}"{{{ end }}}{{{ if navigation.targetBlank }}} target="_blank"{{{ end }}}>
 					{{{ if navigation.iconClass }}}
 					<i class="fa fa-fw text-muted {navigation.iconClass}" data-content="{navigation.content}"></i>

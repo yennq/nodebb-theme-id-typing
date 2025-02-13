@@ -6,8 +6,8 @@
 	</h6>
 	<div class="collapse show" id="account-collapse">
 		<ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
-			<li><a href="{config.relative_path}/register" class="btn btn-sm btn-ghost">[[global:register]]</a></li>
-			<li><a href="{config.relative_path}/login" class="btn btn-sm btn-ghost">[[global:login]]</a></li>
+			<li><a href="{config.relative_path}/register" class="btn btn-ghost">[[global:register]]</a></li>
+			<li><a href="{config.relative_path}/login" class="btn btn-ghost">[[global:login]]</a></li>
 		</ul>
 	</div>
 </li>

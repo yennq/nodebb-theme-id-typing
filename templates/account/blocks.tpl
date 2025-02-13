@@ -19,8 +19,8 @@
 							<a href="{config.relative_path}/uid/{../uid}">{buildAvatar(edit, "24px", true)} {../username}</a>
 						</div>
 
-						<button class="btn btn-sm btn-outline-danger text-nowrap {{{ if ./isBlocked }}}hidden{{{ end }}}" data-uid="{./uid}" data-action="block">[[user:block-user]]</button>
-						<button class="btn btn-sm btn-outline-primary text-nowrap {{{ if !./isBlocked }}}hidden{{{ end }}}" data-uid="{./uid}" data-action="unblock">[[user:unblock-user]]</button>
+						<button class="btn btn-outline-danger text-nowrap {{{ if ./isBlocked }}}hidden{{{ end }}}" data-uid="{./uid}" data-action="block">[[user:block-user]]</button>
+						<button class="btn btn-outline-primary text-nowrap {{{ if !./isBlocked }}}hidden{{{ end }}}" data-uid="{./uid}" data-action="unblock">[[user:unblock-user]]</button>
 					</div>
 				</li>
 				{{{ end }}}
@@ -35,7 +35,7 @@
 		{{{ each users }}}
 		<div class="d-flex flex-column gap-1">
 			<!-- IMPORT partials/users/item.tpl -->
-			<button class="btn btn-sm btn-outline-primary text-nowrap mx-auto" data-uid="{./uid}" data-action="unblock">[[user:unblock-user]]</button>
+			<button class="btn btn-outline-primary text-nowrap mx-auto" data-uid="{./uid}" data-action="unblock">[[user:unblock-user]]</button>
 		</div>
 		{{{ end }}}
 
