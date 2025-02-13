@@ -6,7 +6,7 @@
 				<i class="unread-dot fa-solid fa-circle fa-beat text-info" style="--fa-animation-duration: 2s;"></i>
 			</div>
 
-			<div class="card card-body h-100 rounded-1 border-0 ps-0" {{{ if showSelect }}}component="topic/select"{{{ end }}}>
+			<div class="card card-body h-100 rounded-0 border-0 ps-0" {{{ if showSelect }}}component="topic/select"{{{ end }}}>
 				<link itemprop="url" content="{config.relative_path}/topic/{../slug}" />
 				<meta itemprop="name" content="{function.stripTags, ../title}" />
 				<meta itemprop="itemListOrder" content="descending" />
@@ -21,8 +21,8 @@
 								{buildAvatar(./user, "64px", false, "rounded")}
 							</a>
 
-							<span class="badge border border-gray-300 text-muted fw-semibold "><i class="fa-regular fa-heart"></i> {./votes}</span>
-							<span class="badge border border-gray-300 text-muted fw-semibold"><i class="fa-regular fa-message"></i> {./postcount}</span>
+							<span class="badge border-0border-gray-300 text-muted fw-semibold "><i class="fa-regular fa-heart"></i> {./votes}</span>
+							<span class="badge border-0border-gray-300 text-muted fw-semibold"><i class="fa-regular fa-message"></i> {./postcount}</span>
 						</div>
 					</div>
 
@@ -33,8 +33,8 @@
 								{buildAvatar(./user, "24px", false, "rounded")}
 							</a>
 
-							<span class="badge border border-gray-300 text-muted fw-semibold "><i class="fa-regular fa-heart"></i> {./votes}</span>
-							<span class="badge border border-gray-300 text-muted fw-semibold"><i class="fa-regular fa-message"></i> {./postcount}</span>
+							<span class="badge border-0border-gray-300 text-muted fw-semibold "><i class="fa-regular fa-heart"></i> {./votes}</span>
+							<span class="badge border-0border-gray-300 text-muted fw-semibold"><i class="fa-regular fa-message"></i> {./postcount}</span>
 						</div>
 					</div>
 
@@ -59,7 +59,7 @@
 
 								{{{ if ./thumbs.length }}}
 								<div class="position-relative mb-3 mt-1">
-									<div class="topic-thumbs rounded-1 position-relative text-decoration-none flex-shrink-0" aria-label="[[topic:thumb-image]]">
+									<div class="topic-thumbs rounded-0 position-relative text-decoration-none flex-shrink-0" aria-label="[[topic:thumb-image]]">
 										<img class="topic-thumb bg-light" style="width:auto;max-width: 100%;height: auto;object-fit: contain;" src="{./thumbs.0.url}" alt=""/>
 										<span data-numthumbs="{./thumbs.length}" class="px-1 mt-1 position-absolute top-0 start-50 translate-middle-x badge rounded text-bg-info">+{increment(./thumbs.length, "-1")}</span>
 										{{{ if ./teaser.content.length }}}
@@ -77,19 +77,19 @@
 
 								<div class="d-flex gap-1 align-items-start">
 									<div component="topic/labels" class="d-flex gap-1 text-truncate align-items-center flex-wrap w-100">
-										<span component="topic/scheduled" class="badge border border-gray-300 text-body {{{ if !./scheduled }}}hidden{{{ end }}}">
+										<span component="topic/scheduled" class="badge border-0border-gray-300 text-body {{{ if !./scheduled }}}hidden{{{ end }}}">
 											<i class="fa fa-clock-o"></i>
 											<span>[[topic:scheduled]]</span>
 										</span>
-										<span component="topic/pinned" class="badge border border-gray-300 text-body {{{ if (./scheduled || !./pinned) }}}hidden{{{ end }}}">
+										<span component="topic/pinned" class="badge border-0border-gray-300 text-body {{{ if (./scheduled || !./pinned) }}}hidden{{{ end }}}">
 											<i class="fa fa-thumb-tack"></i>
 											<span>{{{ if !./pinExpiry }}}[[topic:pinned]]{{{ else }}}[[topic:pinned-with-expiry, {isoTimeToLocaleString(./pinExpiryISO, config.userLang)}]]{{{ end }}}</span>
 										</span>
-										<span component="topic/locked" class="badge border border-gray-300 text-body {{{ if !./locked }}}hidden{{{ end }}}">
+										<span component="topic/locked" class="badge border-0border-gray-300 text-body {{{ if !./locked }}}hidden{{{ end }}}">
 											<i class="fa fa-lock"></i>
 											<span>[[topic:locked]]</span>
 										</span>
-										<span class="badge border border-gray-300 text-body {{{ if !./oldCid }}}hidden{{{ end }}}">
+										<span class="badge border-0border-gray-300 text-body {{{ if !./oldCid }}}hidden{{{ end }}}">
 											<i class="fa fa-arrow-circle-right"></i>
 											<span>[[topic:moved]]</span>
 										</span>
@@ -99,7 +99,7 @@
 										{function.buildCategoryLabel, ./category, "a", "border"}
 										{{{ end }}}
 
-										<a href="{config.relative_path}/topic/{./slug}" class="timeago badge border border-gray-300 text-muted fw-semibold" title="{./timestampISO}"></a>
+										<a href="{config.relative_path}/topic/{./slug}" class="timeago badge border-0border-gray-300 text-muted fw-semibold" title="{./timestampISO}"></a>
 									</div>
 								</div>
 							</div>

@@ -1,12 +1,12 @@
 <li component="categories/category" data-cid="{./cid}" class="category-{./cid} mb-3
-{{{ if !./isSection }}}card card-body rounded-1 border-0{{{ end }}}">
+{{{ if !./isSection }}}card card-body rounded-0 border-0{{{ end }}}">
 	<meta itemprop="name" content="{./name}">
 
 	<div class="content">
 		<div class="d-flex gap-3">
 			{{{ if !./isSection }}}
 			<div class="fs-3">
-				{buildCategoryIcon(@value, "64px", "rounded-1")}
+				{buildCategoryIcon(@value, "64px", "rounded-0")}
 			</div>
 			{{{ end }}}
 
@@ -23,7 +23,7 @@
 						{{{ end }}}
 
 						<!-- topic count -->
-						<span class="text-xs badge border border-gray-300 fw-semibold text-muted d-none d-lg-inline-block" style="vertical-align: middle;"><i class="fa fa-comment-o"></i> {formattedNumber(./totalTopicCount)}</span>
+						<span class="text-xs badge border-0border-gray-300 fw-semibold text-muted d-none d-lg-inline-block" style="vertical-align: middle;"><i class="fa fa-comment-o"></i> {formattedNumber(./totalTopicCount)}</span>
 						{{{ end }}}
 					</h4>
 
@@ -40,7 +40,7 @@
 						{{{ each ./children }}}
 						{{{ if !./isSection }}}
 						<li class="category-children-item">
-							{buildCategoryIcon(@value, "24px", "rounded-1")}
+							{buildCategoryIcon(@value, "24px", "rounded-0")}
 							{{{ if ./link }}}
 							<a href="{./link}">{./name}</a></span>
 							{{{ else }}}

@@ -7,14 +7,14 @@
 
 			<ul component="blocks/search/list" class="dropdown-menu p-1 block-edit list-unstyled" role="menu">
 				<li component="blocks/start-typing">
-					<a href="#" class="dropdown-item rounded-1" role="menuitem">[[admin/menu:search.start-typing]]</a>
+					<a href="#" class="dropdown-item rounded-0" role="menuitem">[[admin/menu:search.start-typing]]</a>
 				</li>
 				<li component="blocks/no-users" class="hidden">
-					<a href="#" class="dropdown-item rounded-1" role="menuitem">[[users:no-users-found]]</a>
+					<a href="#" class="dropdown-item rounded-0" role="menuitem">[[users:no-users-found]]</a>
 				</li>
 				{{{ each edit }}}
 				<li component="blocks/search/match">
-					<div class="dropdown-item rounded-1 d-flex flex-nowrap gap-2 justify-content-between align-items-center" role="menuitem">
+					<div class="dropdown-item rounded-0 d-flex flex-nowrap gap-2 justify-content-between align-items-center" role="menuitem">
 						<div class="text-truncate">
 							<a href="{config.relative_path}/uid/{../uid}">{buildAvatar(edit, "24px", true)} {../username}</a>
 						</div>

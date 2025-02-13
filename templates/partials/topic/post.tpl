@@ -1,4 +1,4 @@
-<div class="card card-body px-3 h-100 rounded-1 border-0">
+<div class="card card-body px-3 h-100 rounded-0 border-0">
 
 	{{{ if !posts.index }}}
 	<!-- main post topic info -->
@@ -10,19 +10,19 @@
 				</h1>
 				<div class="d-flex flex-wrap gap-2 align-items-start">
 					<div component="topic/labels" class="d-flex gap-1 flex-wrap {{{ if (!scheduled && (!pinned && (!locked && (!oldCid && !icons.length)))) }}}hidden{{{ end }}}">
-						<span component="topic/scheduled" class="badge badge border border-gray-300 text-body {{{ if !scheduled }}}hidden{{{ end }}}">
+						<span component="topic/scheduled" class="badge badge border-0border-gray-300 text-body {{{ if !scheduled }}}hidden{{{ end }}}">
 							<i class="fa fa-clock-o"></i>
 							[[topic:scheduled]]
 						</span>
-						<span component="topic/pinned" class="badge badge border border-gray-300 text-body {{{ if (scheduled || !pinned) }}}hidden{{{ end }}}">
+						<span component="topic/pinned" class="badge badge border-0border-gray-300 text-body {{{ if (scheduled || !pinned) }}}hidden{{{ end }}}">
 							<i class="fa fa-thumb-tack"></i>
 							{{{ if !pinExpiry }}}[[topic:pinned]]{{{ else }}}[[topic:pinned-with-expiry, {isoTimeToLocaleString(./pinExpiryISO, config.userLang)}]]{{{ end }}}
 						</span>
-						<span component="topic/locked" class="badge badge border border-gray-300 text-body {{{ if !locked }}}hidden{{{ end }}}">
+						<span component="topic/locked" class="badge badge border-0border-gray-300 text-body {{{ if !locked }}}hidden{{{ end }}}">
 							<i class="fa fa-lock"></i>
 							[[topic:locked]]
 						</span>
-						<a href="{config.relative_path}/category/{oldCid}" class="badge badge border border-gray-300 text-body text-decoration-none {{{ if !oldCid }}}hidden{{{ end }}}">
+						<a href="{config.relative_path}/category/{oldCid}" class="badge badge border-0border-gray-300 text-body text-decoration-none {{{ if !oldCid }}}hidden{{{ end }}}">
 							<i class="fa fa-arrow-circle-right"></i>
 							{{{ if privileges.isAdminOrMod }}}[[topic:moved-from, {oldCategory.name}]]{{{ else }}}[[topic:moved]]{{{ end }}}
 						</a>
@@ -34,9 +34,9 @@
 					<div data-tid="{./tid}" component="topic/tags" class="lh-1 tags tag-list d-flex flex-nowrap hidden-xs hidden-empty gap-1"><!-- IMPORT partials/topic/tags.tpl --></div>
 
 					<div class="d-flex flex-nowrap gap-1">
-						<span class="badge border text-muted rounded-1 d-none d-lg-inline-block"><i class="fa fa-fw fa-user"></i> <span title="{postercount}">{humanReadableNumber(postercount)}</span></span>
-						<span class="badge border text-muted rounded-1"><i class="fa-regular fa-fw fa-message"></i> <span title="{postcount}">{humanReadableNumber(postcount)}</span></span>
-						<span class="badge border text-muted rounded-1"><i class="fa fa-fw fa-eye"></i> <span title="{viewcount}">{humanReadableNumber(viewcount)}</span></span>
+						<span class="badge border-0text-muted rounded-0 d-none d-lg-inline-block"><i class="fa fa-fw fa-user"></i> <span title="{postercount}">{humanReadableNumber(postercount)}</span></span>
+						<span class="badge border-0text-muted rounded-0"><i class="fa-regular fa-fw fa-message"></i> <span title="{postcount}">{humanReadableNumber(postcount)}</span></span>
+						<span class="badge border-0text-muted rounded-0"><i class="fa fa-fw fa-eye"></i> <span title="{viewcount}">{humanReadableNumber(viewcount)}</span></span>
 					</div>
 				</div>
 			</div>
@@ -44,7 +44,7 @@
 			<div class="d-flex gap-2 justify-content-end align-items-center hidden" component="topic/thumb/list">
 				{{{ each thumbs }}}
 				<a class="d-inline-block h-100" href="{./url}">
-					<img class="rounded-1 h-100 bg-light" style="max-width: 4rem; object-fit: contain;" src="{./url}" />
+					<img class="rounded-0 h-100 bg-light" style="max-width: 4rem; object-fit: contain;" src="{./url}" />
 				</a>
 				{{{ end }}}
 			</div>
