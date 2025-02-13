@@ -1,5 +1,5 @@
 <div class="topic d-flex gap-2">
-	<div class="flex-1" style="min-width: 0;">
+	<div class="flex-1 d-sm-flex" style="min-width: 0;">
 		{{{ if merger }}}
 		<!-- IMPORT partials/topic/merged-message.tpl -->
 		{{{ end }}}

@@ -28,7 +28,7 @@
 	<!-- IMPORT partials/offcanvas.tpl -->
 
 	<!-- IMPORT partials/mobile-nav.tpl -->
-	<main id="panel" class="slideout-panel container-lg px-sm-0">
+	<main id="panel" class="slideout-panel container-lg">
 		<div class="d-flex gap-3 flex-nowrap">
 			<div class="d-none d-lg-block" style="max-width: 200px; min-width: 200px;">
 				<div class="sticky-top pt-4">
@@ -36,6 +36,6 @@
 				</div>
 			</div>
 			<div class="flex-grow-1 pb-0" style="min-width: 0px;">
-				<div class="px-0 px-lg-2 pt-3 pt-lg-4 pt-sm-0" id="content">
+				<div class="px-0 px-lg-2 pt-3 pt-lg-4" id="content">
 				<!-- IMPORT partials/noscript/warning.tpl -->
 				<!-- IMPORT partials/noscript/message.tpl -->
