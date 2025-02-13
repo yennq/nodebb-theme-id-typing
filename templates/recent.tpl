@@ -5,12 +5,12 @@
 	{{{end}}}
 </div>
 <div class="recent">
-	<div class="topic-list-header sticky-top btn-sm-toolbar justify-content-between align-items-between py-2 mb-2 gap-1">
+	<div class="topic-list-header sticky-top btn-toolbar justify-content-between align-items-between py-2 mb-2 gap-1">
 		<div class="d-flex gap-1">
 			{{{ if canPost }}}
 			<!-- IMPORT partials/buttons/newTopic.tpl -->
 			{{{ else }}}
-			<a component="category/post/guest" href="{config.relative_path}/login" class="btn-sm btn-sm-primary">[[category:guest-login-post]]</a>
+			<a component="category/post/guest" href="{config.relative_path}/login" class="btn btn-primary btn-sm">[[category:guest-login-post]]</a>
 			{{{ end }}}
 			<a href="{config.relative_path}/{selectedFilter.url}{querystring}" class="d-inline-block">
 				<div class="alert alert-warning h-100 m-0 px-2 py-1 d-flex gap-1 align-items-center hide" id="new-topics-alert"><i class="fa fa-fw fa-rotate-right"></i>[[recent:load-new-posts]]</div>

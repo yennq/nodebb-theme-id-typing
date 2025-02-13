@@ -1,7 +1,7 @@
 <div id="users-container" class="row row-cols-2 row-cols-md-3 row-cols-xl-4 g-3 users-container mb-4">
 	{{{ each users }}}
 	<div>
-		<a href="{config.relative_path}/user/{./userslug}" class="btn-sm btn-sm-ghost card card-body flex-row border-0 d-flex ff-secondary gap-2 text-start justify-content-start p-2 ff-base">
+		<a href="{config.relative_path}/user/{./userslug}" class="btn btn-ghost card card-body flex-row border-0 d-flex ff-secondary gap-2 text-start justify-content-start p-2 ff-base">
 			{buildAvatar(@value, "48px", true, "flex-shrink-0")}
 			<div class="d-flex flex-column gap-1 text-truncate">
 				<div class="fw-semibold text-truncate" title="{./displayname}">{./displayname}</div>

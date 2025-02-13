@@ -1,6 +1,6 @@
 <div class="d-flex align-items-center">
 	<div class="dropup" component="skinSwitcher">
-		<button class="btn-sm btn-sm-ghost" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fa fa-paintbrush"></i></button>
+		<button class="btn btn-sm btn-ghost" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fa fa-paintbrush"></i></button>
 		<ul class="dropdown-menu p-1 overflow-auto" role="menu">
 			<div class="d-flex">
 				<div>

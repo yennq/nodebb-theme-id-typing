@@ -11,7 +11,7 @@
 		<div class="search">
 			<div class="input-group">
 				<input type="text" class="form-control form-control-sm" placeholder="[[global:search]]" id="tag-search">
-				<button class="btn-sm btn-sm-primary" type="button">
+				<button class="btn btn-sm btn-primary" type="button">
 					<i class="fa fa-search"></i>
 				</button>
 			</div>

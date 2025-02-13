@@ -8,34 +8,34 @@
 		</h6>
 	</div>
 	<div class="collapse show" id="manage-collapse">
-		<ul class="btn-sm-toggle-nav list-unstyled fw-normal pb-1 small">
+		<ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
 			{{{ if showModMenu }}}
 			<li>
-				<a class="btn-sm btn-sm-ghost" href="{relative_path}/flags">
+				<a class="btn btn-sm btn-ghost" href="{relative_path}/flags">
 					[[pages:flagged-content]]
 				</a>
 			</li>
 			<li>
-				<a class="btn-sm btn-sm-ghost" href="{relative_path}/post-queue">
+				<a class="btn btn-sm btn-ghost" href="{relative_path}/post-queue">
 					[[pages:post-queue]]
 				</a>
 			</li>
 			{{{ if registrationQueueEnabled }}}
 			<li>
-				<a class="btn-sm btn-sm-ghost" href="{relative_path}/registration-queue">
+				<a class="btn btn-sm btn-ghost" href="{relative_path}/registration-queue">
 					[[pages:registration-queue]]
 				</a>
 			</li>
 			{{{ end }}}
 			<li>
-				<a class="btn-sm btn-sm-ghost" href="{relative_path}/ip-blacklist">
+				<a class="btn btn-sm btn-ghost" href="{relative_path}/ip-blacklist">
 					[[pages:ip-blacklist]]
 				</a>
 			</li>
 			{{{ else }}}
 			{{{ if postQueueEnabled }}}
 			<li>
-				<a class="btn-sm btn-sm-ghost" href="{relative_path}/post-queue">
+				<a class="btn btn-sm btn-ghost" href="{relative_path}/post-queue">
 					[[pages:post-queue]]
 				</a>
 			</li>

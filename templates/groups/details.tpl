@@ -21,17 +21,17 @@
 					<div class="d-flex gap-2">
 						{group.descriptionParsed}
 						<div class="pb-3">
-							{{{ if group.private }}}<span class="badge text-bg-light border-0 border-0">[[groups:details.private]]</span>{{{ end }}}
-							{{{ if group.hidden }}}<span class="badge text-bg-light border-0 border-0">[[groups:details.hidden]]</span>{{{ end }}}
+							{{{ if group.private }}}<span class="badge text-bg-light border border-1">[[groups:details.private]]</span>{{{ end }}}
+							{{{ if group.hidden }}}<span class="badge text-bg-light border border-1">[[groups:details.hidden]]</span>{{{ end }}}
 						</div>
 					</div>
 				</div>
 				<div class="d-flex gap-2 align-items-start">
 					{{{ if loggedIn }}}
-					{function.membershipbtn-sm, group}
+					{function.membershipBtn, group}
 					{{{ end }}}
 					{{{ if isAdmin }}}
-					<a href="{config.relative_path}/admin/manage/groups/{group.nameEncoded}" target="_blank" class="btn-sm btn-sm-light"><i class="fa fa-gear"></i> [[user:edit]]</a>
+					<a href="{config.relative_path}/admin/manage/groups/{group.nameEncoded}" target="_blank" class="btn btn-light"><i class="fa fa-gear"></i> [[user:edit]]</a>
 					{{{ end }}}
 				</div>
 			</div>
@@ -39,26 +39,26 @@
 	</div>
 
 	<div class="text-sm mb-3 nav d-flex flex-row flex-wrap gap-1 ">
-		<button data-bs-toggle="tab" data-bs-target="#groups-posts" class="btn-sm btn-sm-ghost text-start d-flex align-items-center ff-secondary fw-semibold {{{ if template.groups/details }}}active{{{ end }}}">
+		<button data-bs-toggle="tab" data-bs-target="#groups-posts" class="btn btn-ghost btn-sm text-start d-flex align-items-center ff-secondary fw-semibold {{{ if template.groups/details }}}active{{{ end }}}">
 			<div class="flex-grow-1">[[global:posts]]</div>
 		</button>
-		<button data-bs-toggle="tab" data-bs-target="#groups-members" class="btn-sm btn-sm-ghost text-start d-flex align-items-center ff-secondary fw-semibold gap-2">
+		<button data-bs-toggle="tab" data-bs-target="#groups-members" class="btn btn-ghost btn-sm text-start d-flex align-items-center ff-secondary fw-semibold gap-2">
 			<div class="flex-grow-1">[[groups:members]]</div>
 			<span component="group/member/count" class="flex-shrink-0 text-xs" title="{group.memberCount}">{humanReadableNumber(group.memberCount)}</span>
 		</button>
 
 		{{{ if group.isOwner }}}
-		<button data-bs-toggle="tab" data-bs-target="#groups-pending" class="btn-sm btn-sm-ghost text-start d-flex align-items-center ff-secondary fw-semibold gap-2">
+		<button data-bs-toggle="tab" data-bs-target="#groups-pending" class="btn btn-ghost btn-sm text-start d-flex align-items-center ff-secondary fw-semibold gap-2">
 			<div class="flex-grow-1">[[groups:details.pending]]</div>
 			<span component="group/pending/count" class="flex-shrink-0 text-xs" title="{group.pending.length}">{humanReadableNumber(group.pending.length)}</span>
 		</button>
 
-		<button data-bs-toggle="tab" data-bs-target="#groups-invited" class="btn-sm btn-sm-ghost text-start d-flex align-items-center ff-secondary fw-semibold gap-2">
+		<button data-bs-toggle="tab" data-bs-target="#groups-invited" class="btn btn-ghost btn-sm text-start d-flex align-items-center ff-secondary fw-semibold gap-2">
 			<div class="flex-grow-1">[[groups:details.invited]]</div>
 			<span component="group/invited/count" class="flex-shrink-0 text-xs" title="{group.invited.length}">{humanReadableNumber(group.invited.length)}</span>
 		</button>
 
-		<button data-bs-toggle="tab" data-bs-target="#groups-admin" class="btn-sm btn-sm-ghost text-start d-flex align-items-center ff-secondary fw-semibold">
+		<button data-bs-toggle="tab" data-bs-target="#groups-admin" class="btn btn-ghost btn-sm text-start d-flex align-items-center ff-secondary fw-semibold">
 			<div class="flex-grow-1">[[global:header.admin]]</div>
 		</button>
 		{{{ end }}}

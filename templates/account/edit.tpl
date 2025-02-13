@@ -48,11 +48,11 @@
 								<div component="group/badge/item" class="d-flex gap-2 justify-content-between align-items-center" data-value="{./displayName}" data-selected="{./selected}">
 									<!-- IMPORT partials/groups/badge.tpl -->
 									<div class="d-flex gap-1">
-										<button component="group/toggle/hide" type="button" class="btn-sm btn-sm-ghost text-body {{{ if !./selected }}}hidden{{{ end }}}" title="[[user:hide-group-title]]"><i class="fa fa-fw fa-eye"></i></button>
-										<button component="group/toggle/show" type="button" class="btn-sm btn-sm-ghost text-body {{{ if ./selected }}}hidden{{{ end }}}" title="[[user:show-group-title]]"><i class="fa fa-fw fa-eye-slash"></i></button>
+										<button component="group/toggle/hide" type="button" class="btn btn-ghost btn-sm text-body {{{ if !./selected }}}hidden{{{ end }}}" title="[[user:hide-group-title]]"><i class="fa fa-fw fa-eye"></i></button>
+										<button component="group/toggle/show" type="button" class="btn btn-ghost btn-sm text-body {{{ if ./selected }}}hidden{{{ end }}}" title="[[user:show-group-title]]"><i class="fa fa-fw fa-eye-slash"></i></button>
 										{{{ if allowMultipleBadges }}}
-										<button component="group/order/up" type="button" class="btn-sm btn-sm-ghost text-body" title="[[user:order-group-up]]"><i class="fa fa-fw fa-chevron-up"></i></button>
-										<button component="group/order/down" type="button" class="btn-sm btn-sm-ghost text-body" title="[[user:order-group-down]]"><i class="fa fa-fw fa-chevron-down"></i></button>
+										<button component="group/order/up" type="button" class="btn btn-ghost btn-sm text-body" title="[[user:order-group-up]]"><i class="fa fa-fw fa-chevron-up"></i></button>
+										<button component="group/order/down" type="button" class="btn btn-ghost btn-sm text-body" title="[[user:order-group-down]]"><i class="fa fa-fw fa-chevron-down"></i></button>
 										{{{ end }}}
 									</div>
 								</div>
@@ -76,7 +76,7 @@
 						<!-- ENDIF !disableSignatures -->
 						<!-- ENDIF allowSignature -->
 
-						<a id="submitbtn-sm" href="#" class="btn-sm btn-sm-primary">[[global:save-changes]]</a>
+						<a id="submitBtn" href="#" class="btn btn-primary">[[global:save-changes]]</a>
 					</form>
 				</div>
 				<hr class="visible-xs visible-sm"/>
@@ -104,13 +104,13 @@
 
 					{{{ if config.requireEmailConfirmation }}}
 					{{{ if (email && isSelf) }}}
-					<a id="confirm-email" href="#" class="btn-sm btn-sm-warning {{{ if email:confirmed }}}hide{{{ end }}}">[[user:confirm-email]]</a><br/><br/>
+					<a id="confirm-email" href="#" class="btn btn-warning {{{ if email:confirmed }}}hide{{{ end }}}">[[user:confirm-email]]</a><br/><br/>
 					{{{ end }}}
 					{{{ end }}}
 
 
 					{{{ if (allowAccountDelete && isSelf) }}}
-					<a id="deleteAccountbtn-sm" href="#" class="btn-sm btn-sm-danger">[[user:delete-account]]</a><br/><br/>
+					<a id="deleteAccountBtn" href="#" class="btn btn-danger">[[user:delete-account]]</a><br/><br/>
 					{{{ end }}}
 				</div>
 				{{{ if sso.length }}}
@@ -119,7 +119,7 @@
 					{{{each sso}}}
 					<div class="list-group-item">
 						<!-- IF ../deauthUrl -->
-						<a data-component="{../component}" class="btn-sm btn-sm-outline-secondary float-end" href="{../deauthUrl}">[[user:sso.dissociate]]</a>
+						<a data-component="{../component}" class="btn btn-outline-secondary btn-sm float-end" href="{../deauthUrl}">[[user:sso.dissociate]]</a>
 						<!-- END -->
 						<a data-component="{../component}" href="{../url}" target="<!-- IF ../associated -->_blank<!-- ELSE -->_top<!-- ENDIF ../associated -->">
 							<!-- IF ../icon --><i class="fa {../icon}"></i><!-- ENDIF ../icon -->

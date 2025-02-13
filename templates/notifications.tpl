@@ -3,8 +3,8 @@
 
 	<!-- IMPORT partials/breadcrumbs.tpl -->
 	<div class="d-flex gap-2 justify-content-end" role="toolbar">
-		<div class="btn-sm-group me-2">
-			<button class="btn-sm btn-sm-ghost dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+		<div class="btn-group me-2">
+			<button class="btn btn-ghost btn-sm dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 				{{{ if selectedFilter }}}{selectedFilter.name}{{{ end}}} <span class="caret"></span>
 			</button>
 			<ul class="dropdown-menu dropdown-menu-end p-1" role="menu">
@@ -23,7 +23,7 @@
 			</ul>
 		</div>
 
-		<button component="notifications/mark_all" class="btn-sm btn-sm-ghost" type="button">
+		<button component="notifications/mark_all" class="btn btn-ghost btn-sm" type="button">
 			<i class="fa fa-eye"></i>
 			[[notifications:mark-all-read]]
 		</button>
@@ -54,7 +54,7 @@
 				</div>
 				<div>
 					{{{ if ./nid }}}
-					<button class="mark-read btn-sm btn-sm-ghost d-flex align-items-center justify-content-center flex-grow-0 flex-shrink-0 p-1" style="width: 1.5rem; height: 1.5rem;">
+					<button class="mark-read btn btn-ghost btn-sm d-flex align-items-center justify-content-center flex-grow-0 flex-shrink-0 p-1" style="width: 1.5rem; height: 1.5rem;">
 						<i class="unread fa fa-2xs fa-circle text-primary {{{ if ./read }}}hidden{{{ end }}}" aria-label="[[unread:mark-as-read]]"></i>
 						<i class="read fa fa-2xs fa-circle-o text-muted {{{ if !./read }}}hidden{{{ end }}}" aria-label="[[unread:mark-as-unread]]"></i>
 					</button>

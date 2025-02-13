@@ -1,6 +1,6 @@
-<div class="btn-sm-group bottom-sheet" component="thread/sort">
-	<button class="btn-sm btn-sm-ghost ff-secondary d-flex gap-2 align-items-center dropdown-toggle" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" aria-label="[[aria:post-sort-option, {sortOptionLabel}]]">
-		<i class="fa fa-fw fa-arrow-down-wide-short text-primary" style="line-height: var(--bs-btn-sm-line-height);"></i>
+<div class="btn-group bottom-sheet" component="thread/sort">
+	<button class="btn btn-ghost btn-sm ff-secondary d-flex gap-2 align-items-center dropdown-toggle" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" aria-label="[[aria:post-sort-option, {sortOptionLabel}]]">
+		<i class="fa fa-fw fa-arrow-down-wide-short text-primary" style="line-height: var(--bs-btn-line-height);"></i>
 		<span class="d-none d-xl-inline fw-semibold">{sortOptionLabel}</span>
 	</button>
 

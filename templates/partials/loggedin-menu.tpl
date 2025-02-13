@@ -11,21 +11,21 @@
 	</div>
 
 	<div class="collapse show" id="account-collapse">
-		<ul class="btn-sm-toggle-nav list-unstyled fw-normal pb-1 small">
+		<ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
 			<li>
-				<a href="{config.relative_path}/user/{user.userslug}" class="btn-sm btn-sm-ghost">[[user:profile]]</a>
+				<a href="{config.relative_path}/user/{user.userslug}" class="btn btn-sm btn-ghost">[[user:profile]]</a>
 			</li>
 
 			<li class="d-flex justify-content-between align-items-center">
-				<a href="{config.relative_path}/notifications" class="btn-sm btn-sm-ghost">[[user:notifications]]</a> <span component="notification/badge" class="badge bg-info {{{ if !unreadCount.notification }}}hidden{{{ end }}}">{unreadCount.notification}</span>
+				<a href="{config.relative_path}/notifications" class="btn btn-sm btn-ghost">[[user:notifications]]</a> <span component="notification/badge" class="badge bg-info {{{ if !unreadCount.notification }}}hidden{{{ end }}}">{unreadCount.notification}</span>
 			</li>
 
 			<li class="d-flex justify-content-between align-items-center">
-				<a href="{config.relative_path}/user/{user.userslug}/chats{{{ if user.lastRoomId }}}/{user.lastRoomId}{{{ end }}}" class="btn-sm btn-sm-ghost">[[pages:chats]]</a> <span component="chat/badge" class="badge bg-info {{{ if !unreadCount.chat }}}hidden{{{ end }}}">{unreadCount.chat}</span>
+				<a href="{config.relative_path}/user/{user.userslug}/chats{{{ if user.lastRoomId }}}/{user.lastRoomId}{{{ end }}}" class="btn btn-sm btn-ghost">[[pages:chats]]</a> <span component="chat/badge" class="badge bg-info {{{ if !unreadCount.chat }}}hidden{{{ end }}}">{unreadCount.chat}</span>
 			</li>
 
 			<li component="user/logout">
-				<a href="#" class="btn-sm btn-sm-ghost">[[global:logout]]</a>
+				<a href="#" class="btn btn-sm btn-ghost">[[global:logout]]</a>
 			</li>
 		</ul>
 	</div>

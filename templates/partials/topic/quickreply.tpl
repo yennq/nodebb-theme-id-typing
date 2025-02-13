@@ -10,12 +10,12 @@
 			<input type="hidden" name="tid" value="{tid}" />
 			<input type="hidden" name="_csrf" value="{config.csrf_token}" />
 			<div class="quickreply-message mb-2">
-				<textarea name="content" component="topic/quickreply/text" class="form-control mousetrap border-0" rows="5" placeholder="[[modules:composer.textarea.placeholder]]"></textarea>
+				<textarea name="content" component="topic/quickreply/text" class="form-control mousetrap" rows="5" placeholder="[[modules:composer.textarea.placeholder]]"></textarea>
 				<div class="imagedrop"><div>[[topic:composer.drag-and-drop-images]]</div></div>
 			</div>
 			<div class="d-flex gap-1 justify-content-end">
-				<button type="submit" component="topic/quickreply/expand" class="btn-sm btn-sm-outline-primary" formmethod="get"><i class="fa fa-expand"></i></button>
-				<button type="submit" component="topic/quickreply/button" class="btn-sm btn-sm-primary">[[topic:post-quick-reply]]</button>
+				<button type="submit" component="topic/quickreply/expand" class="btn btn-outline-primary btn-sm" formmethod="get"><i class="fa fa-expand"></i></button>
+				<button type="submit" component="topic/quickreply/button" class="btn btn-primary btn-sm">[[topic:post-quick-reply]]</button>
 			</div>
 		</form>
 		<form component="topic/quickreply/upload" method="post" enctype="multipart/form-data">
