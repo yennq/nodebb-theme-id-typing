@@ -49,7 +49,7 @@
 
 								{{{ if ./thumbs.length }}}
 								<div class="position-relative my-3">
-									<div class="topic-thumbs rounded-1 position-relative text-decoration-none flex-shrink-0 d-none d-xl-block" aria-label="[[topic:thumb-image]]">
+									<div class="topic-thumbs rounded-1 position-relative text-decoration-none flex-shrink-0" aria-label="[[topic:thumb-image]]">
 										<img class="topic-thumb bg-light" style="width:auto;max-width: 100%;height: auto;object-fit: contain;" src="{./thumbs.0.url}" alt=""/>
 										<span data-numthumbs="{./thumbs.length}" class="px-1 mt-1 position-absolute top-0 start-50 translate-middle-x badge rounded text-bg-info">+{increment(./thumbs.length, "-1")}</span>
 										{{{ if ./teaser.content.length }}}

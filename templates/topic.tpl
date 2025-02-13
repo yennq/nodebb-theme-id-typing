@@ -46,7 +46,7 @@
 		<!-- IMPORT partials/paginator.tpl -->
 		{{{ end }}}
 	</div>
-	<div class="px-0 px-lg-2 d-none">
+	<div class="px-0 px-lg-2 d-sm-none">
 		<!-- IMPORT partials/topic/sidebar.tpl -->
 	</div>
 </div>
