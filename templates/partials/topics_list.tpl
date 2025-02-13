@@ -23,12 +23,14 @@
 
 					<!-- mobile profile picture -->
 					<div class="d-inline-block d-lg-none mx-2">
-						<a href="{{{ if ./user.userslug }}}{config.relative_path}/user/{./user.userslug}{{{ else }}}#{{{ end }}}">
-							{buildAvatar(./user, "24px", false, "rounded")}
-						</a>
+						<div class="d-inline-block">
+							<a class="mb-2" href="{{{ if ./user.userslug }}}{config.relative_path}/user/{./user.userslug}{{{ else }}}#{{{ end }}}">
+								{buildAvatar(./user, "24px", false, "rounded")}
+							</a>
 
-						<span class="badge border border-gray-300 text-muted fw-semibold "><i class="fa-regular fa-heart"></i> {./votes}</span>
-						<span class="badge border border-gray-300 text-muted fw-semibold"><i class="fa-regular fa-message"></i> {./postcount}</span>
+							<span class="badge border border-gray-300 text-muted fw-semibold "><i class="fa-regular fa-heart"></i> {./votes}</span>
+							<span class="badge border border-gray-300 text-muted fw-semibold"><i class="fa-regular fa-message"></i> {./postcount}</span>
+						</div>
 					</div>
 
 					<div class="text-wrap text-truncate flex-grow-1 d-flex align-items-top">
