@@ -39,26 +39,26 @@
 	</div>
 
 	<div class="text-sm mb-3 nav d-flex flex-row flex-wrap gap-1 ">
-		<button data-bs-toggle="tab" data-bs-target="#groups-posts" class="btn btn-ghost btn-sm text-start d-flex align-items-center ff-secondary fw-semibold {{{ if template.groups/details }}}active{{{ end }}}">
+		<button data-bs-toggle="tab" data-bs-target="#groups-posts" class="btn btn-ghost text-start d-flex align-items-center ff-secondary fw-semibold {{{ if template.groups/details }}}active{{{ end }}}">
 			<div class="flex-grow-1">[[global:posts]]</div>
 		</button>
-		<button data-bs-toggle="tab" data-bs-target="#groups-members" class="btn btn-ghost btn-sm text-start d-flex align-items-center ff-secondary fw-semibold gap-2">
+		<button data-bs-toggle="tab" data-bs-target="#groups-members" class="btn btn-ghost text-start d-flex align-items-center ff-secondary fw-semibold gap-2">
 			<div class="flex-grow-1">[[groups:members]]</div>
 			<span component="group/member/count" class="flex-shrink-0 text-xs" title="{group.memberCount}">{humanReadableNumber(group.memberCount)}</span>
 		</button>
 
 		{{{ if group.isOwner }}}
-		<button data-bs-toggle="tab" data-bs-target="#groups-pending" class="btn btn-ghost btn-sm text-start d-flex align-items-center ff-secondary fw-semibold gap-2">
+		<button data-bs-toggle="tab" data-bs-target="#groups-pending" class="btn btn-ghost text-start d-flex align-items-center ff-secondary fw-semibold gap-2">
 			<div class="flex-grow-1">[[groups:details.pending]]</div>
 			<span component="group/pending/count" class="flex-shrink-0 text-xs" title="{group.pending.length}">{humanReadableNumber(group.pending.length)}</span>
 		</button>
 
-		<button data-bs-toggle="tab" data-bs-target="#groups-invited" class="btn btn-ghost btn-sm text-start d-flex align-items-center ff-secondary fw-semibold gap-2">
+		<button data-bs-toggle="tab" data-bs-target="#groups-invited" class="btn btn-ghost text-start d-flex align-items-center ff-secondary fw-semibold gap-2">
 			<div class="flex-grow-1">[[groups:details.invited]]</div>
 			<span component="group/invited/count" class="flex-shrink-0 text-xs" title="{group.invited.length}">{humanReadableNumber(group.invited.length)}</span>
 		</button>
 
-		<button data-bs-toggle="tab" data-bs-target="#groups-admin" class="btn btn-ghost btn-sm text-start d-flex align-items-center ff-secondary fw-semibold">
+		<button data-bs-toggle="tab" data-bs-target="#groups-admin" class="btn btn-ghost text-start d-flex align-items-center ff-secondary fw-semibold">
 			<div class="flex-grow-1">[[global:header.admin]]</div>
 		</button>
 		{{{ end }}}
