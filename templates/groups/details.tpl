@@ -1,12 +1,12 @@
 <div component="groups/container" class="groups details">
-	<div class="card card-body p-1 border-0 rounded-0 mb-4">
+	<div class="card card-body p-1 border-0 rounded-1 mb-4">
 		<div class="d-flex flex-column flex-fill gap-3">
-			<div class="cover rounded-0 w-100" component="groups/cover" style="background-image: url({group.cover:url}); background-position: {group.cover:position};">
+			<div class="cover rounded-1 w-100" component="groups/cover" style="background-image: url({group.cover:url}); background-position: {group.cover:position};">
 				{{{ if group.isOwner }}}
 				<div class="controls text-center">
-					<span class="upload p-2 m-2 rounded-0 text-bg-light opacity-75"><i class="fa fa-fw fa-upload"></i></span>
-					<span class="resize p-2 m-2 rounded-0 text-bg-light opacity-75"><i class="fa fa-fw fa-arrows"></i></span>
-					<span class="remove p-2 m-2 rounded-0 text-bg-light opacity-75"><i class="fa fa-fw fa-times"></i></span>
+					<span class="upload p-2 m-2 rounded-1 text-bg-light opacity-75"><i class="fa fa-fw fa-upload"></i></span>
+					<span class="resize p-2 m-2 rounded-1 text-bg-light opacity-75"><i class="fa fa-fw fa-arrows"></i></span>
+					<span class="remove p-2 m-2 rounded-1 text-bg-light opacity-75"><i class="fa fa-fw fa-times"></i></span>
 				</div>
 				<div class="save text-bg-primary">[[groups:cover-save]] <i class="fa fa-fw fa-floppy-o"></i></div>
 				<div class="indicator text-bg-primary">[[groups:cover-saving]] <i class="fa fa-fw fa-refresh fa-spin"></i></div>
