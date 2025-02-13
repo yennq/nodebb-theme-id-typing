@@ -21,8 +21,8 @@
 								{buildAvatar(./user, "64px", false, "rounded")}
 							</a>
 
-							<span class="badge border border-gray-300 text-muted fw-semibold "><i class="fa-regular fa-heart"></i> {./votes}</span>
-							<span class="badge border border-gray-300 text-muted fw-semibold"><i class="fa-regular fa-message"></i> {./postcount}</span>
+							<span class="badge text-muted fw-semibold "><i class="fa-regular fa-heart"></i> {./votes}</span>
+							<span class="badge text-muted fw-semibold"><i class="fa-regular fa-message"></i> {./postcount}</span>
 						</div>
 					</div>
 
@@ -33,8 +33,8 @@
 								{buildAvatar(./user, "24px", false, "rounded")}
 							</a>
 
-							<span class="badge border border-gray-300 text-muted fw-semibold "><i class="fa-regular fa-heart"></i> {./votes}</span>
-							<span class="badge border border-gray-300 text-muted fw-semibold"><i class="fa-regular fa-message"></i> {./postcount}</span>
+							<span class="badge text-muted fw-semibold "><i class="fa-regular fa-heart"></i> {./votes}</span>
+							<span class="badge text-muted fw-semibold"><i class="fa-regular fa-message"></i> {./postcount}</span>
 						</div>
 					</div>
 
@@ -47,15 +47,9 @@
 									{{{ else }}}
 									<span>{./title}</span>
 									{{{ end }}}
-								</h5>
 
-								<div class="d-flex gap-1 text-truncate align-items-center flex-wrap w-100 mt-0 mb-2">
-									<div data-tid="{./tid}" component="topic/tags" class="tags tag-list d-none d-md-inline-flex gap-1 lh-1 {{{ if !./tags.length}}}hidden{{{ end }}}">
-										{{{ each ./tags }}}
-										<!-- IMPORT partials/topic/tag.tpl -->
-										{{{ end }}}
-									</div>
-								</div>
+									<a href="{config.relative_path}/topic/{./slug}" class="timeago badge border border-gray-300 text-muted fw-semibold" title="{./timestampISO}"></a>
+								</h5>
 
 								{{{ if ./thumbs.length }}}
 								<div class="position-relative mb-3 mt-1">
@@ -99,7 +93,13 @@
 										{function.buildCategoryLabel, ./category, "a", "border"}
 										{{{ end }}}
 
-										<a href="{config.relative_path}/topic/{./slug}" class="timeago badge border border-gray-300 text-muted fw-semibold" title="{./timestampISO}"></a>
+										<div class="d-flex gap-1 text-truncate align-items-center flex-wrap w-100 mt-0 mb-2">
+											<div data-tid="{./tid}" component="topic/tags" class="tags tag-list d-none d-md-inline-flex gap-1 lh-1 {{{ if !./tags.length}}}hidden{{{ end }}}">
+												{{{ each ./tags }}}
+												<!-- IMPORT partials/topic/tag.tpl -->
+												{{{ end }}}
+											</div>
+										</div>
 									</div>
 								</div>
 							</div>
