@@ -26,6 +26,9 @@
 						<a href="{{{ if ./user.userslug }}}{config.relative_path}/user/{./user.userslug}{{{ else }}}#{{{ end }}}">
 							{buildAvatar(./user, "24px", false, "rounded")}
 						</a>
+
+						<span class="badge border border-gray-300 text-muted fw-semibold "><i class="fa-regular fa-heart"></i> {./votes}</span>
+						<span class="badge border border-gray-300 text-muted fw-semibold"><i class="fa-regular fa-message"></i> {./postcount}</span>
 					</div>
 
 					<div class="text-wrap text-truncate flex-grow-1 d-flex align-items-top">
@@ -39,7 +42,7 @@
 									{{{ end }}}
 								</h5>
 
-								<div class="d-flex gap-1 text-truncate align-items-center flex-wrap w-100">
+								<div class="d-flex gap-1 text-truncate align-items-center flex-wrap w-100 mt-2">
 									<div data-tid="{./tid}" component="topic/tags" class="tags tag-list d-none d-md-inline-flex gap-1 lh-1 {{{ if !./tags.length}}}hidden{{{ end }}}">
 										{{{ each ./tags }}}
 										<!-- IMPORT partials/topic/tag.tpl -->
@@ -48,7 +51,7 @@
 								</div>
 
 								{{{ if ./thumbs.length }}}
-								<div class="position-relative my-3">
+								<div class="position-relative mb-3 mt-1">
 									<div class="topic-thumbs rounded-1 position-relative text-decoration-none flex-shrink-0" aria-label="[[topic:thumb-image]]">
 										<img class="topic-thumb bg-light" style="width:auto;max-width: 100%;height: auto;object-fit: contain;" src="{./thumbs.0.url}" alt=""/>
 										<span data-numthumbs="{./thumbs.length}" class="px-1 mt-1 position-absolute top-0 start-50 translate-middle-x badge rounded text-bg-info">+{increment(./thumbs.length, "-1")}</span>
@@ -90,8 +93,6 @@
 										{{{ end }}}
 
 										<a href="{config.relative_path}/topic/{./slug}" class="timeago badge border border-gray-300 text-muted fw-semibold" title="{./timestampISO}"></a>
-										<span class="badge border border-gray-300 text-muted fw-semibold "><i class="fa-regular fa-heart"></i> {./votes}</span>
-										<span class="badge border border-gray-300 text-muted fw-semibold"><i class="fa-regular fa-message"></i> {./postcount}</span>
 									</div>
 								</div>
 							</div>
