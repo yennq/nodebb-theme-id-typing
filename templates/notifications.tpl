@@ -13,7 +13,7 @@
 				<li role="separator" class="dropdown-divider"></li>
 				{{{ else }}}
 				<li role="presentation" class="category">
-					<a class="dropdown-item rounded-1 d-flex gap-3 align-items-center justify-content-between" role="menuitem" href="{config.relative_path}/notifications?filter={filters.filter}">
+					<a class="dropdown-item rounded-0 d-flex gap-3 align-items-center justify-content-between" role="menuitem" href="{config.relative_path}/notifications?filter={filters.filter}">
 						<span><i class="fa fa-fw {{{ if filters.selected }}}fa-check{{{ end }}}"></i> {filters.name}</span>
 						<span class="">{./count}</span>
 					</a>
@@ -37,7 +37,7 @@
 
 	<ul component="notifications/list" class="notifications-list list-unstyled" data-nextstart="{nextStart}">
 	{{{each notifications}}}
-		<li data-nid="{notifications.nid}" class="{notifications.readClass} d-flex mb-2 card card-body rounded-1 border-0 {{{ if !./read}}}unread{{{ end }}}" component="notifications/item">
+		<li data-nid="{notifications.nid}" class="{notifications.readClass} d-flex mb-2 card card-body rounded-0 border-0 {{{ if !./read}}}unread{{{ end }}}" component="notifications/item">
 			<div class="d-flex gap-3">
 				<div class="align-self-start">
 					{{{ if notifications.from }}}

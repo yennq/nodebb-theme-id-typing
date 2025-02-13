@@ -18,7 +18,7 @@
 	</button>
 	<ul class="dropdown-menu dropdown-menu-end p-1 text-sm" role="menu">
 		<li>
-			<a class="dropdown-item rounded-1 d-flex align-items-center gap-2 p-2" href="#" component="topic/following" role="menuitem">
+			<a class="dropdown-item rounded-0 d-flex align-items-center gap-2 p-2" href="#" component="topic/following" role="menuitem">
 				<div class="flex-grow-1 d-flex flex-column">
 					<span class="d-flex align-items-center gap-2">
 						<i class="flex-shrink-0 fa fa-fw fa-bell-o text-muted"></i>
@@ -31,7 +31,7 @@
 		</li>
 
 		<li>
-			<a class="dropdown-item rounded-1 d-flex align-items-center gap-2 p-2" href="#" component="topic/not-following" role="menuitem">
+			<a class="dropdown-item rounded-0 d-flex align-items-center gap-2 p-2" href="#" component="topic/not-following" role="menuitem">
 				<div class="flex-grow-1 d-flex flex-column">
 					<span class="d-flex align-items-center gap-2">
 						<i class="flex-shrink-0 fa fa-fw fa-bell-slash-o text-muted"></i>
@@ -44,7 +44,7 @@
 		</li>
 
 		<li>
-			<a class="dropdown-item rounded-1 d-flex align-items-center gap-2 p-2" href="#" component="topic/ignoring" role="menuitem">
+			<a class="dropdown-item rounded-0 d-flex align-items-center gap-2 p-2" href="#" component="topic/ignoring" role="menuitem">
 				<div class="flex-grow-1 d-flex flex-column">
 					<span class="d-flex align-items-center gap-2">
 						<i class="flex-shrink-0 fa fa-fw fa-eye-slash text-muted"></i>
