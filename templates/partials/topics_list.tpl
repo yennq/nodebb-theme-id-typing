@@ -49,20 +49,22 @@
 									{{{ end }}}
 								</h5>
 
-								<div component="topic/labels" class="d-flex gap-1 text-truncate align-items-center flex-wrap w-100  mb-2 mt-1">
-									{{{ if !template.category }}}
-									{function.buildCategoryLabel, ./category, "a", "border"}
-									{{{ end }}}
+								<div class="justify-content-between align-items-between mt-1 mb-2 gap-1">
+									<div class="d-flex gap-1">
+										{{{ if !template.category }}}
+										{function.buildCategoryLabel, ./category, "a", "border"}
+										{{{ end }}}
 
-									<div class="d-flex gap-1 text-truncate align-items-center flex-wrap w-100 mt-0 mb-2">
-										<div data-tid="{./tid}" component="topic/tags" class="tags tag-list d-none d-md-inline-flex gap-1 lh-1 {{{ if !./tags.length}}}hidden{{{ end }}}">
-											{{{ each ./tags }}}
-											<!-- IMPORT partials/topic/tag.tpl -->
-											{{{ end }}}
+										<div class="d-flex gap-1 text-truncate align-items-center flex-wrap w-100 mt-0 mb-2">
+											<div data-tid="{./tid}" component="topic/tags" class="tags tag-list d-none d-md-inline-flex gap-1 lh-1 {{{ if !./tags.length}}}hidden{{{ end }}}">
+												{{{ each ./tags }}}
+												<!-- IMPORT partials/topic/tag.tpl -->
+												{{{ end }}}
+											</div>
 										</div>
-									</div>
 
-									<a href="{config.relative_path}/topic/{./slug}" class="timeago badge border border-gray-300 text-muted fw-semibold" title="{./timestampISO}"></a>
+										<a href="{config.relative_path}/topic/{./slug}" class="timeago badge border border-gray-300 text-muted fw-semibold" title="{./timestampISO}"></a>
+									</div>
 								</div>
 
 								{{{ if ./thumbs.length }}}
