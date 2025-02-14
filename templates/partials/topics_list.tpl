@@ -47,9 +47,21 @@
 									{{{ else }}}
 									<span>{./title}</span>
 									{{{ end }}}
-
-									<a href="{config.relative_path}/topic/{./slug}" class="timeago badge border border-gray-300 text-muted fw-semibold" title="{./timestampISO}"></a>
 								</h5>
+
+								{{{ if !template.category }}}
+								{function.buildCategoryLabel, ./category, "a", "border"}
+								{{{ end }}}
+
+								<div class="d-flex gap-1 text-truncate align-items-center flex-wrap w-100 mt-0 mb-2">
+									<div data-tid="{./tid}" component="topic/tags" class="tags tag-list d-none d-md-inline-flex gap-1 lh-1 {{{ if !./tags.length}}}hidden{{{ end }}}">
+										{{{ each ./tags }}}
+										<!-- IMPORT partials/topic/tag.tpl -->
+										{{{ end }}}
+									</div>
+								</div>
+
+								<a href="{config.relative_path}/topic/{./slug}" class="timeago badge border border-gray-300 text-muted fw-semibold" title="{./timestampISO}"></a>
 
 								{{{ if ./thumbs.length }}}
 								<div class="position-relative mb-3 mt-1">
@@ -88,18 +100,6 @@
 											<span>[[topic:moved]]</span>
 										</span>
 										{{{each ./icons}}}<span class="lh-1">{@value}</span>{{{end}}}
-
-										{{{ if !template.category }}}
-										{function.buildCategoryLabel, ./category, "a", "border"}
-										{{{ end }}}
-
-										<div class="d-flex gap-1 text-truncate align-items-center flex-wrap w-100 mt-0 mb-2">
-											<div data-tid="{./tid}" component="topic/tags" class="tags tag-list d-none d-md-inline-flex gap-1 lh-1 {{{ if !./tags.length}}}hidden{{{ end }}}">
-												{{{ each ./tags }}}
-												<!-- IMPORT partials/topic/tag.tpl -->
-												{{{ end }}}
-											</div>
-										</div>
 									</div>
 								</div>
 							</div>
