@@ -49,8 +49,8 @@
 									{{{ end }}}
 								</h5>
 
-								<div class="justify-content-between align-items-between mt-1 mb-2 gap-1">
-									<div class="d-flex gap-1">
+								<div class="justify-content-between align-items-between mt-1 mb-2">
+									<div class="d-flex">
 										{{{ if !template.category }}}
 										{function.buildCategoryLabel, ./category, "a", "border"}
 										{{{ end }}}
@@ -63,12 +63,12 @@
 											</div>
 										</div>
 
-										<a href="{config.relative_path}/topic/{./slug}" class="timeago badge border border-gray-300 text-muted fw-semibold" title="{./timestampISO}"></a>
+										<a href="{config.relative_path}/topic/{./slug}" class="d-flex timeago badge border border-gray-300 text-muted fw-semibold" title="{./timestampISO}"></a>
 									</div>
 								</div>
 
 								{{{ if ./thumbs.length }}}
-								<div class="position-relative mb-3 mt-1">
+								<div class="position-relative mb-0 mt-1">
 									<div class="topic-thumbs rounded-1 position-relative text-decoration-none flex-shrink-0" aria-label="[[topic:thumb-image]]">
 										<img class="topic-thumb bg-light" style="width:auto;max-width: 100%;height: auto;object-fit: contain;" src="{./thumbs.0.url}" alt=""/>
 										<span data-numthumbs="{./thumbs.length}" class="px-1 mt-1 position-absolute top-0 start-50 translate-middle-x badge rounded text-bg-info">+{increment(./thumbs.length, "-1")}</span>
@@ -85,7 +85,7 @@
 								{{{ end }}}
 								{{{ end }}}
 
-								<div class="d-flex gap-1 align-items-start">
+								<div class="d-flex gap-1 align-items-start mt-3">
 									<div component="topic/labels" class="d-flex gap-1 text-truncate align-items-center flex-wrap w-100">
 										<span component="topic/scheduled" class="badge border border-gray-300 text-body {{{ if !./scheduled }}}hidden{{{ end }}}">
 											<i class="fa fa-clock-o"></i>
