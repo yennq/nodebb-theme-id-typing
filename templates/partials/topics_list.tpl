@@ -17,7 +17,7 @@
 					<!-- profile pic-->
 					<div class="d-none d-lg-block px-3">
 						<div class="d-grid">
-							<a class="mb-1" href="{{{ if ./user.userslug }}}{config.relative_path}/user/{./user.userslug}{{{ else }}}#{{{ end }}}">
+							<a class="mb-2" href="{{{ if ./user.userslug }}}{config.relative_path}/user/{./user.userslug}{{{ else }}}#{{{ end }}}">
 								{buildAvatar(./user, "64px", false, "rounded")}
 							</a>
 
@@ -29,7 +29,7 @@
 					<!-- mobile profile picture -->
 					<div class="d-inline-block d-lg-none mx-2">
 						<div class="d-grid">
-							<a class="mb-1" href="{{{ if ./user.userslug }}}{config.relative_path}/user/{./user.userslug}{{{ else }}}#{{{ end }}}">
+							<a class="mb-2" href="{{{ if ./user.userslug }}}{config.relative_path}/user/{./user.userslug}{{{ else }}}#{{{ end }}}">
 								{buildAvatar(./user, "24px", false, "rounded")}
 							</a>
 
