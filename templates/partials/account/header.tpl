@@ -47,6 +47,15 @@
 						<li role="separator" class="dropdown-divider"></li>
 						<!-- IF loggedIn -->
 						<!-- IF !isSelf -->
+						<button class="btn-morph type-fab <!-- IF isFollowing -->heart<!-- ELSE -->plus<!-- ENDIF isFollowing -->" title="<!-- IF isFollowing -->[[global:unfollow]]<!-- ELSE -->[[global:follow]]<!-- ENDIF isFollowing -->">
+							<span>
+								<span class="s1"></span>
+								<span class="s2"></span>
+								<span class="s3"></span>
+							</span>
+						</button>
+						<!-- ENDIF !isSelf -->
+						<!-- ENDIF loggedIn -->
 						<!-- IF !banned -->
 						<!-- IF canChat -->
 						<li class="<!-- IF !hasPrivateChat -->hidden<!-- ENDIF !hasPrivateChat -->">
