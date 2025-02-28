@@ -32,17 +32,6 @@
 					<h4 class="mb-0">{displayname} <span class="text-muted">(@{username})</span></h4>
 
 					<button class="btn btn-ghost" data-bs-toggle="dropdown"><i class="fa fa-gear text-muted"></i></button>
-					<!-- IF !isSelf -->
-					<div class="type-follow-fab">
-						<button class="btn-morph <!-- IF isFollowing -->heart<!-- ELSE -->plus<!-- ENDIF isFollowing -->" title="<!-- IF isFollowing -->[[global:unfollow]]<!-- ELSE -->[[global:follow]]<!-- ENDIF isFollowing -->">
-							<span>
-								<span class="s1"></span>
-								<span class="s2"></span>
-								<span class="s3"></span>
-							</span>
-						</button>
-					</div>
-					<!-- ENDIF !isSelf -->
 					<ul class="dropdown-menu dropdown-menu-end p-1" role="menu">
 						<li>
 							<a class="dropdown-item rounded-1" aria-current="page" href="{config.relative_path}/user/{userslug}">[[user:profile]]</a>
